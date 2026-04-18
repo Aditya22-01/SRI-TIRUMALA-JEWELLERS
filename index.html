@@ -1444,7 +1444,7 @@ footer {
         </div>
         <p class="footer-tagline">Your family's trusted gold jewellery partner in Hiramandalam. BIS hallmarked gold, transparent pricing, and designs for every occasion.</p>
         <div class="footer-social">
-          <a href="https://wa.me/919876543210" class="social-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://wa.me/919014457855" class="social-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           <a href="#" class="social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="#" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
@@ -1813,7 +1813,7 @@ function whatsappProduct(id){
   const p=products.find(x=>x.id===id);
   const price=calcProductPrice(p);
   const msg=`🛕 *SRI TIRUMALA JEWELLERS*\nHello! I'm interested in:\n\n💍 *${p.name}*\n⚖️ Weight: ${p.weight}g\n✨ Karat: ${p.karat}K\n💰 Price: ${formatPrice(price)}\n\nPlease confirm availability. Thank you!`;
-  window.open('https://wa.me/919876543210?text='+encodeURIComponent(msg),'_blank');
+  window.open('https://wa.me/919014457855?text='+encodeURIComponent(msg),'_blank');
 }
 
 // ===== CART =====
@@ -1859,12 +1859,12 @@ function whatsappCart(){
   const items=cartItems.map(c=>`• ${c.name} (${c.weight}g, ${c.karat}K) x${c.qty} = ${formatPrice(calcProductPrice(c)*c.qty)}`).join('\n');
   const total=cartItems.reduce((a,c)=>a+calcProductPrice(c)*c.qty,0);
   const msg=`🛕 *SRI TIRUMALA JEWELLERS – ORDER*\n\n${items}\n\n💰 *Total: ${formatPrice(total)}*\n\nPlease confirm my order. Thank you!`;
-  window.open('https://wa.me/919876543210?text='+encodeURIComponent(msg),'_blank');
+  window.open('https://wa.me/919014457855?text='+encodeURIComponent(msg),'_blank');
 }
 function openWishlist(){ showToast(`Wishlist: ${wishlist.length} item(s) saved ❤️`); }
 function openWhatsApp(){
   const msg='🛕 *SRI TIRUMALA JEWELLERS*\nHello! I would like to enquire about gold jewellery. Please help me.';
-  window.open('https://wa.me/919876543210?text='+encodeURIComponent(msg),'_blank');
+  window.open('https://wa.me/919014457855?text='+encodeURIComponent(msg),'_blank');
 }
 function openMap(){ window.open('https://maps.google.com/?q=Hiramandalam,Srikakulam,Andhra+Pradesh','_blank'); }
 
