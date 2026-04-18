@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Shop gold jewellery at Sri Tirumala Jewellers - Rings, Chains, Bangles, Earrings, Pendants, Bridal Sets. Live pricing."/>
+<title>Shop Collections — Sri Tirumala Jewellers</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/main.css"/>
+<link rel="stylesheet" href="../css/components.css"/>
+</head>
+<body>
+<div id="gold-ticker"><div class="ticker-track" id="tickerTrack">
+  <span class="tick-item">🔴 LIVE GOLD RATES</span>
+  <span class="tick-item">24K: <strong id="t24">₹7,420/g</strong></span>
+  <span class="tick-item">22K: <strong id="t22">₹6,802/g</strong></span>
+  <span class="tick-item">18K: <strong id="t18">₹5,565/g</strong></span>
+  <span class="tick-item">All prices update live</span>
+  <span class="tick-item">24K: <strong>₹7,420/g</strong></span>
+  <span class="tick-item">22K: <strong>₹6,802/g</strong></span>
+</div></div>
+
+<header id="siteHeader">
+  <div class="header-wrap">
+    <a href="../index.html" class="logo"><div class="logo-icon">🛕</div><div><div class="logo-name">SRI TIRUMALA JEWELLERS</div><div class="logo-place">Hiramandalam · Est. 1998</div></div></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="shop.html" class="nav-link active">Shop</a>
+      <a href="rates.html" class="nav-link">Gold Rate</a>
+      <a href="calculator.html" class="nav-link">Calculator</a>
+      <a href="offers.html" class="nav-link">Offers</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-btn" onclick="STJ.toggleLang()">తె | EN</button>
+      <button class="icon-btn" onclick="STJ.openCart()"><i class="fas fa-shopping-bag"></i><span class="badge" id="cartCount">0</span></button>
+      <button class="icon-btn" onclick="STJ.openAccount()" id="accountBtn"><i class="fas fa-user"></i></button>
+      <button class="hamburger" onclick="STJ.toggleMenu()"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="../index.html">Home</a><i class="fas fa-chevron-right"></i><span>Shop</span></div>
+    <h1 class="page-title">Our Collections</h1>
+    <p class="page-sub">All prices calculated live from today's gold rate — No hidden charges</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="shop-layout">
+    <!-- SIDEBAR FILTERS -->
+    <aside class="filter-sidebar">
+      <div class="filter-card">
+        <div class="filter-title">Categories</div>
+        <div class="filter-option"><input type="radio" name="cat" id="f-all" value="all" checked onchange="ShopPage.filterCat('all')"/><label for="f-all">All Jewellery</label></div>
+        <div class="filter-option"><input type="radio" name="cat" id="f-rings" value="rings" onchange="ShopPage.filterCat('rings')"/><label for="f-rings">💍 Rings</label></div>
+        <div class="filter-option"><input type="radio" name="cat" id="f-chains" value="chains" onchange="ShopPage.filterCat('chains')"/><label for="f-chains">📿 Chains</label></div>
+        <div class="filter-option"><input type="radio" name="cat" id="f-bangles" value="bangles" onchange="ShopPage.filterCat('bangles')"/><label for="f-bangles">🔮 Bangles</label></div>
+        <div class="filter-option"><input type="radio" name="cat" id="f-earrings" value="earrings" onchange="ShopPage.filterCat('earrings')"/><label for="f-earrings">✨ Earrings</label></div>
+        <div class="filter-option"><input type="radio" name="cat" id="f-pendants" value="pendants" onchange="ShopPage.filterCat('pendants')"/><label for="f-pendants">🌟 Pendants</label></div>
+        <div class="filter-option"><input type="radio" name="cat" id="f-bridal" value="bridal" onchange="ShopPage.filterCat('bridal')"/><label for="f-bridal">👑 Bridal Sets</label></div>
+      </div>
+      <div class="filter-card">
+        <div class="filter-title">Karat</div>
+        <div class="filter-option"><input type="checkbox" id="f-24k" value="24" onchange="ShopPage.applyFilters()"/><label for="f-24k">24K — 99.9% Pure</label></div>
+        <div class="filter-option"><input type="checkbox" id="f-22k" value="22" onchange="ShopPage.applyFilters()" checked/><label for="f-22k">22K — 91.6% Pure</label></div>
+        <div class="filter-option"><input type="checkbox" id="f-18k" value="18" onchange="ShopPage.applyFilters()"/><label for="f-18k">18K — 75% Pure</label></div>
+        <div class="filter-option"><input type="checkbox" id="f-14k" value="14" onchange="ShopPage.applyFilters()"/><label for="f-14k">14K — 58.3% Pure</label></div>
+      </div>
+      <div class="filter-card">
+        <div class="filter-title">Price Range</div>
+        <div class="price-range-wrap">
+          <input type="range" id="priceRange" min="0" max="700000" value="700000" step="5000" oninput="ShopPage.updatePriceRange(this.value)"/>
+          <div class="price-display"><span>₹0</span><span id="priceMax">₹7,00,000+</span></div>
+        </div>
+      </div>
+      <div class="filter-card">
+        <div class="filter-title">Availability</div>
+        <div class="filter-option"><input type="checkbox" id="f-instock" onchange="ShopPage.applyFilters()"/><label for="f-instock">In Stock Only</label></div>
+        <div class="filter-option"><input type="checkbox" id="f-featured" onchange="ShopPage.applyFilters()"/><label for="f-featured">Featured Items</label></div>
+      </div>
+      <button onclick="ShopPage.resetFilters()" style="width:100%;padding:0.6rem;background:transparent;border:1px solid rgba(201,150,42,0.3);color:#888;border-radius:6px;font-family:var(--font-sans);font-size:0.8rem;cursor:pointer;transition:var(--transition)" onmouseover="this.style.color='#C9962A'" onmouseout="this.style.color='#888'">Reset Filters</button>
+    </aside>
+
+    <!-- MAIN PRODUCTS AREA -->
+    <main>
+      <div class="filter-sort">
+        <div class="result-count" id="resultCount">Showing 28 products</div>
+        <div style="flex:1"></div>
+        <select class="sort-select" onchange="ShopPage.sortProducts(this.value)">
+          <option value="featured">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="weight-asc">Weight: Light First</option>
+          <option value="name">Name: A-Z</option>
+        </select>
+        <div style="display:flex;gap:0.5rem">
+          <button onclick="ShopPage.setView('grid')" id="viewGrid" style="background:var(--gold);border:none;width:32px;height:32px;border-radius:4px;color:#000;cursor:pointer;"><i class="fas fa-th"></i></button>
+          <button onclick="ShopPage.setView('list')" id="viewList" style="background:transparent;border:1px solid rgba(201,150,42,0.3);width:32px;height:32px;border-radius:4px;color:#888;cursor:pointer;"><i class="fas fa-list"></i></button>
+        </div>
+      </div>
+      <div class="products-grid" id="shopGrid"></div>
+      <div id="noResults" style="display:none;text-align:center;padding:4rem;color:#999;font-family:var(--font-sans)">
+        <div style="font-size:3rem">🔍</div><p>No products found matching your filters.</p>
+        <button onclick="ShopPage.resetFilters()" class="btn-outline" style="margin-top:1rem;display:inline-flex">Reset Filters</button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="siteFooter">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <p>© 2025 Sri Tirumala Jewellers · Hiramandalam, Srikakulam</p>
+      <p><a href="../index.html" style="color:var(--gold)">← Back to Home</a></p>
+    </div>
+  </div>
+</footer>
+<div class="wa-float"><div class="wa-label">Order via WhatsApp</div><a href="https://wa.me/919014457855" target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i></a></div>
+<div class="drawer-overlay" id="cartOverlay" onclick="STJ.closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer"><div class="drawer-header"><h3>🛍 Your Cart</h3><button onclick="STJ.closeCart()"><i class="fas fa-times"></i></button></div><div class="drawer-items" id="cartItems"></div><div class="drawer-footer"><div class="cart-total-row"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div><div class="cart-total-row" style="font-size:0.78rem;color:#888"><span>GST (3%)</span><span id="cartGst">₹0</span></div><div class="cart-total-row total"><span>Total</span><strong id="cartTotal">₹0</strong></div><a href="checkout.html" class="btn-primary" style="width:100%;justify-content:center;margin-top:1rem">Proceed to Checkout</a><button class="btn-whatsapp" style="width:100%;margin-top:0.5rem;justify-content:center" onclick="STJ.whatsappCart()"><i class="fab fa-whatsapp"></i> WhatsApp Order</button></div></aside>
+<div class="modal-overlay" id="loginModal"><div class="modal-box"><button class="modal-close" onclick="STJ.closeModal('loginModal')"><i class="fas fa-times"></i></button><div class="modal-logo">🛕 Sri Tirumala Jewellers</div><div class="modal-tabs"><button class="mtab active" onclick="STJ.switchTab('login')">Login</button><button class="mtab" onclick="STJ.switchTab('signup')">Sign Up</button></div><div id="tabLogin" class="tab-panel active"><div class="form-group"><label>Phone</label><input type="tel" id="loginPhone" placeholder="+91 90144 57855" class="form-input"/></div><div class="form-group"><label>Password</label><input type="password" id="loginPass" class="form-input"/></div><button class="btn-primary" style="width:100%;justify-content:center" onclick="STJ.doLogin()">Login</button></div><div id="tabSignup" class="tab-panel"><div class="form-group"><label>Name</label><input type="text" id="signupName" class="form-input"/></div><div class="form-group"><label>Phone</label><input type="tel" id="signupPhone" class="form-input"/></div><div class="form-group"><label>Password</label><input type="password" id="signupPass" class="form-input"/></div><button class="btn-primary" style="width:100%;justify-content:center" onclick="STJ.doSignup()">Sign Up</button></div></div></div>
+<div id="toast" class="toast"></div>
+
+<script src="../js/gold-api.js"></script>
+<script src="../js/store.js"></script>
+<script src="../js/main.js"></script>
+<script>
+const ShopPage = (() => {
+  let currentCat = 'all';
+  let currentSort = 'featured';
+  let maxPrice = 700000;
+  let karatFilter = [22];
+  let inStockOnly = false;
+  let featuredOnly = false;
+
+  function getFilteredProducts() {
+    let products = STJStore.getProducts(currentCat, currentSort);
+    if (inStockOnly) products = products.filter(p => p.stock > 0);
+    if (featuredOnly) products = products.filter(p => p.featured);
+    const kf = Array.from(document.querySelectorAll('input[id^="f-"][id$="k"]:checked')).map(el => parseInt(el.value));
+    if (kf.length > 0) products = products.filter(p => kf.includes(p.karat));
+    products = products.filter(p => {
+      const priceData = GoldAPI.getTotalPrice(p.karat, p.weight, p.making);
+      return priceData.total <= maxPrice;
+    });
+    return products;
+  }
+
+  function render() {
+    const products = getFilteredProducts();
+    const grid = document.getElementById('shopGrid');
+    const noRes = document.getElementById('noResults');
+    const count = document.getElementById('resultCount');
+    if (count) count.textContent = `Showing ${products.length} product${products.length !== 1 ? 's' : ''}`;
+    if (!products.length) {
+      grid.innerHTML = '';
+      if (noRes) noRes.style.display = 'block';
+      return;
+    }
+    if (noRes) noRes.style.display = 'none';
+    grid.innerHTML = products.map(p => STJ.productCard(p)).join('');
+    STJ.setupScrollAnimations();
+  }
+
+  function filterCat(cat) { currentCat = cat; render(); }
+  function sortProducts(sort) { currentSort = sort; render(); }
+  function setView(v) {
+    const grid = document.getElementById('shopGrid');
+    if (v === 'list') { grid.style.gridTemplateColumns = '1fr'; document.getElementById('viewList').style.background = 'var(--gold)'; document.getElementById('viewList').style.color = '#000'; document.getElementById('viewGrid').style.background = 'transparent'; document.getElementById('viewGrid').style.color = '#888'; }
+    else { grid.style.gridTemplateColumns = ''; document.getElementById('viewGrid').style.background = 'var(--gold)'; document.getElementById('viewGrid').style.color = '#000'; document.getElementById('viewList').style.background = 'transparent'; document.getElementById('viewList').style.color = '#888'; }
+  }
+  function applyFilters() {
+    inStockOnly = document.getElementById('f-instock')?.checked || false;
+    featuredOnly = document.getElementById('f-featured')?.checked || false;
+    render();
+  }
+  function updatePriceRange(val) {
+    maxPrice = parseInt(val);
+    const el = document.getElementById('priceMax');
+    if (el) el.textContent = '₹' + parseInt(val).toLocaleString('en-IN');
+    render();
+  }
+  function resetFilters() {
+    currentCat = 'all'; currentSort = 'featured'; maxPrice = 700000;
+    document.querySelectorAll('input[name="cat"]').forEach((r, i) => r.checked = i === 0);
+    document.querySelectorAll('input[id^="f-"][id$="k"]').forEach(r => r.checked = false);
+    document.getElementById('f-22k') && (document.getElementById('f-22k').checked = true);
+    document.getElementById('f-instock') && (document.getElementById('f-instock').checked = false);
+    document.getElementById('f-featured') && (document.getElementById('f-featured').checked = false);
+    document.getElementById('priceRange') && (document.getElementById('priceRange').value = 700000);
+    document.getElementById('priceMax') && (document.getElementById('priceMax').textContent = '₹7,00,000+');
+    render();
+  }
+
+  // Check URL params
+  const urlCat = new URLSearchParams(window.location.search).get('cat');
+  if (urlCat) {
+    currentCat = urlCat;
+    const radio = document.getElementById('f-' + urlCat);
+    if (radio) radio.checked = true;
+  }
+
+  return { filterCat, sortProducts, setView, applyFilters, updatePriceRange, resetFilters, render };
+})();
+
+STJ.init();
+GoldAPI.start();
+GoldAPI.onUpdate(() => ShopPage.render());
+ShopPage.render();
+</script>
+</body>
+</html>
