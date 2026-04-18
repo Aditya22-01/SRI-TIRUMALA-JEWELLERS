@@ -1730,7 +1730,7 @@ function calcJewellery(){
   const w=parseFloat(document.getElementById('jewWeight').value)||0;
   const m=parseFloat(document.getElementById('makingCh').value)||0;
   const gPrice=(k/24)*gold24k;
-  const goldVal=gPrice*w, makingVal=m*w/100;
+  const goldVal=parseFloat(gPrice*w, makingVal=m*w/100);
   document.getElementById('jewTotal').textContent=formatPrice(goldVal+makingVal);
   document.getElementById('jewBreak').textContent='Gold: '+formatPrice(goldVal)+' + Making: '+formatPrice(makingVal);
 }
