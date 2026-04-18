@@ -1,1982 +1,432 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Best gold jewellery shop in Hiramandalam, Srikakulam. Pure gold, transparent pricing. SRI TIRUMALA JEWELLERS – trusted gold jewellery in Andhra Pradesh."/>
-<meta name="keywords" content="gold jewellery Hiramandalam, best gold shop Srikakulam, gold rate Srikakulam, 22K gold jewellery Andhra Pradesh, Sri Tirumala Jewellers"/>
-<title>SRI TIRUMALA JEWELLERS – Pure Gold, Transparent Pricing | Hiramandalam</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+<meta name="description" content="Sri Tirumala Jewellers - Best gold jewellery shop in Hiramandalam, Srikakulam. Pure gold, transparent pricing, BIS hallmarked."/>
+<meta name="keywords" content="gold jewellery Hiramandalam, best gold shop Srikakulam, gold rate today, 22K gold, Sri Tirumala Jewellers"/>
+<meta property="og:title" content="Sri Tirumala Jewellers – Pure Gold, Transparent Pricing"/>
+<meta property="og:description" content="Hiramandalam's most trusted gold jewellery shop since 1998."/>
+<title>Sri Tirumala Jewellers – Pure Gold | Hiramandalam, Srikakulam</title>
+<link rel="icon" href="images/favicon.png" type="image/png"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-
-<style>
-:root {
-  --gold: #C9962A;
-  --gold-light: #E8C35A;
-  --gold-pale: #F5E6B8;
-  --gold-dark: #8B6914;
-  --black: #0A0A0A;
-  --black2: #111111;
-  --black3: #1A1A1A;
-  --charcoal: #2A2A2A;
-  --white: #FAFAF7;
-  --cream: #F9F3E3;
-  --text-dark: #1C1C1C;
-  --text-muted: #6B6B6B;
-  --font-display: 'Cinzel', serif;
-  --font-body: 'Cormorant Garamond', serif;
-  --font-sans: 'Nunito', sans-serif;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: var(--font-sans); background: var(--white); color: var(--text-dark); overflow-x: hidden; }
-
-/* TEMPLE PATTERN SVG */
-.temple-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C9962A' stroke-width='0.4' opacity='0.25'%3E%3Cpath d='M30 5 L35 15 L45 15 L37 22 L40 32 L30 26 L20 32 L23 22 L15 15 L25 15 Z'/%3E%3Ccircle cx='30' cy='50' r='4'/%3E%3Cpath d='M26 46 L34 46 L34 54 L26 54 Z' fill='none'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 60px 60px;
-}
-
-/* GOLD GRADIENT */
-.gold-grad { background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light), var(--gold)); }
-.gold-text { background: linear-gradient(135deg, var(--gold-dark), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-
-/* SCROLLBAR */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--black2); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
-
-/* ===== GOLD TICKER ===== */
-#gold-ticker {
-  background: var(--black);
-  padding: 6px 0;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(201,150,42,0.3);
-}
-.ticker-inner {
-  display: flex;
-  gap: 3rem;
-  animation: ticker 30s linear infinite;
-  white-space: nowrap;
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  color: var(--gold-light);
-  letter-spacing: 0.06em;
-}
-.ticker-inner:hover { animation-play-state: paused; }
-@keyframes ticker { from{transform:translateX(100vw)} to{transform:translateX(-100%)} }
-.ticker-item { display: inline-flex; align-items: center; gap: 0.5rem; }
-.ticker-karat { color: #aaa; font-size: 0.7rem; }
-.ticker-price { color: var(--gold-light); font-weight: 600; }
-.ticker-up { color: #4caf50; }
-.ticker-down { color: #f44336; }
-
-/* ===== HEADER ===== */
-header {
-  position: sticky; top: 0; z-index: 1000;
-  background: rgba(10,10,10,0.97);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(201,150,42,0.2);
-  transition: all 0.3s;
-}
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.7rem 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
-.logo-icon {
-  width: 48px; height: 48px;
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem;
-  box-shadow: 0 0 20px rgba(201,150,42,0.4);
-}
-.logo-text { font-family: var(--font-display); }
-.logo-main { font-size: 1.1rem; color: var(--gold-light); font-weight: 700; letter-spacing: 0.08em; line-height: 1.1; display: block; }
-.logo-sub { font-size: 0.58rem; color: #888; letter-spacing: 0.18em; text-transform: uppercase; }
-
-nav ul { list-style: none; display: flex; gap: 0.2rem; margin: 0; padding: 0; }
-nav ul li a {
-  color: #ccc;
-  text-decoration: none;
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  transition: all 0.2s;
-}
-nav ul li a:hover, nav ul li a.active { color: var(--gold-light); }
-
-.header-actions { display: flex; align-items: center; gap: 0.75rem; }
-.btn-icon {
-  background: transparent;
-  border: 1px solid rgba(201,150,42,0.3);
-  color: var(--gold-light);
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-size: 0.9rem;
-  position: relative;
-}
-.btn-icon:hover { background: var(--gold); color: #000; border-color: var(--gold); }
-.cart-count {
-  position: absolute; top: -4px; right: -4px;
-  background: var(--gold);
-  color: #000;
-  font-size: 0.6rem;
-  font-weight: 700;
-  width: 16px; height: 16px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-}
-.btn-login {
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-  color: #000;
-  border: none;
-  padding: 0.45rem 1.1rem;
-  border-radius: 20px;
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 700;
-  cursor: pointer;
-  letter-spacing: 0.05em;
-  transition: all 0.2s;
-}
-.btn-login:hover { opacity: 0.85; transform: translateY(-1px); }
-.lang-toggle {
-  background: transparent;
-  border: 1px solid rgba(201,150,42,0.3);
-  color: var(--gold-light);
-  padding: 0.35rem 0.7rem;
-  border-radius: 4px;
-  font-size: 0.72rem;
-  cursor: pointer;
-  font-family: var(--font-sans);
-  transition: all 0.2s;
-}
-.lang-toggle:hover { background: rgba(201,150,42,0.1); }
-
-/* Hamburger */
-.hamburger { display: none; background: none; border: none; color: var(--gold-light); font-size: 1.3rem; cursor: pointer; }
-.mobile-nav {
-  display: none;
-  background: var(--black2);
-  border-top: 1px solid rgba(201,150,42,0.2);
-  padding: 1rem;
-}
-.mobile-nav.open { display: block; }
-.mobile-nav ul { list-style: none; padding: 0; }
-.mobile-nav ul li { border-bottom: 1px solid rgba(201,150,42,0.1); }
-.mobile-nav ul li a { display: block; padding: 0.75rem 0.5rem; color: #ccc; text-decoration: none; font-family: var(--font-sans); font-size: 0.9rem; }
-
-/* ===== HERO ===== */
-#hero {
-  min-height: 92vh;
-  background: linear-gradient(135deg, #0A0A0A 0%, #1A1200 40%, #0A0A0A 100%);
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-.hero-bg-pattern {
-  position: absolute; inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C9962A' stroke-width='0.5' opacity='0.15'%3E%3Cpath d='M40 8 L44 20 L57 20 L46 28 L50 41 L40 33 L30 41 L34 28 L23 20 L36 20 Z'/%3E%3Ccircle cx='40' cy='68' r='6'/%3E%3Cpath d='M34 62 L46 62 L46 74 L34 74 Z'/%3E%3Cline x1='40' y1='42' x2='40' y2='62'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 80px 80px;
-}
-.hero-glow {
-  position: absolute;
-  width: 700px; height: 700px;
-  background: radial-gradient(circle, rgba(201,150,42,0.18) 0%, transparent 65%);
-  top: 50%; right: -100px;
-  transform: translateY(-50%);
-  animation: breathe 5s ease-in-out infinite;
-}
-.hero-glow2 {
-  position: absolute;
-  width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(201,150,42,0.10) 0%, transparent 65%);
-  bottom: -100px; left: -50px;
-  animation: breathe 7s ease-in-out infinite reverse;
-}
-@keyframes breathe { 0%,100%{transform:translateY(-50%) scale(1);opacity:0.7} 50%{transform:translateY(-50%) scale(1.1);opacity:1} }
-
-.hero-content { position: relative; z-index: 2; padding: 3rem 2rem; max-width: 1400px; margin: 0 auto; width: 100%; }
-.hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.3rem 1rem;
-  border: 1px solid rgba(201,150,42,0.4);
-  background: rgba(201,150,42,0.08);
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  color: var(--gold-light);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-.hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
-  font-weight: 700;
-  line-height: 1.05;
-  color: var(--white);
-  margin-bottom: 1rem;
-  letter-spacing: 0.02em;
-}
-.hero-title .gold-line {
-  display: block;
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light), var(--gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.hero-subtitle {
-  font-family: var(--font-body);
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 2.5rem;
-  font-style: italic;
-  max-width: 560px;
-}
-.hero-badges { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2.5rem; }
-.hero-badge {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.4rem 0.9rem;
-  background: rgba(201,150,42,0.08);
-  border: 1px solid rgba(201,150,42,0.25);
-  border-radius: 20px;
-  font-size: 0.78rem;
-  color: var(--gold-pale);
-  font-family: var(--font-sans);
-}
-.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn-gold {
-  padding: 0.9rem 2.2rem;
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
-  color: #000;
-  border: none;
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s;
-  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
-  box-shadow: 0 8px 30px rgba(201,150,42,0.35);
-}
-.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(201,150,42,0.5); color: #000; }
-.btn-outline-gold {
-  padding: 0.9rem 2.2rem;
-  background: transparent;
-  color: var(--gold-light);
-  border: 1px solid var(--gold);
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-.btn-outline-gold:hover { background: rgba(201,150,42,0.1); transform: translateY(-3px); color: var(--gold-light); }
-
-.hero-jewelry-showcase {
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  z-index: 2;
-  opacity: 0.85;
-}
-.jewelry-card-mini {
-  width: 140px; height: 140px;
-  background: linear-gradient(135deg, rgba(201,150,42,0.15), rgba(201,150,42,0.05));
-  border: 1px solid rgba(201,150,42,0.3);
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s;
-  animation: floatCard 3s ease-in-out infinite;
-}
-.jewelry-card-mini:nth-child(2) { animation-delay: 0.5s; }
-.jewelry-card-mini:nth-child(3) { animation-delay: 1s; }
-.jewelry-card-mini:nth-child(4) { animation-delay: 1.5s; }
-@keyframes floatCard { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
-.jewelry-card-mini:hover { border-color: var(--gold); background: rgba(201,150,42,0.2); transform: scale(1.05); }
-.jewelry-emoji { font-size: 2.5rem; }
-.jewelry-label { font-family: var(--font-sans); font-size: 0.68rem; color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; }
-
-/* ===== LIVE GOLD PRICE ===== */
-#gold-rates {
-  background: var(--black);
-  padding: 3rem 2rem;
-  position: relative;
-  overflow: hidden;
-}
-#gold-rates::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 4 L22 12 L30 12 L24 17 L26 25 L20 20 L14 25 L16 17 L10 12 L18 12 Z' fill='none' stroke='%23C9962A' stroke-width='0.3' opacity='0.2'/%3E%3C/svg%3E");
-  background-size: 40px 40px;
-}
-.rates-inner { max-width: 1200px; margin: 0 auto; position: relative; }
-.rates-title {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  color: var(--gold-light);
-  text-align: center;
-  margin-bottom: 0.3rem;
-  letter-spacing: 0.1em;
-}
-.rates-subtitle { text-align: center; color: #666; font-size: 0.78rem; margin-bottom: 2rem; font-family: var(--font-sans); letter-spacing: 0.05em; }
-.last-updated { font-size: 0.72rem; color: #555; text-align: center; margin-bottom: 2rem; font-family: var(--font-sans); }
-
-.rates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; }
-.rate-card {
-  background: var(--black2);
-  border: 1px solid rgba(201,150,42,0.2);
-  padding: 1.5rem 1.2rem;
-  border-radius: 8px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s;
-}
-.rate-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-}
-.rate-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 10px 30px rgba(201,150,42,0.2); }
-.rate-card.featured { border-color: var(--gold); background: linear-gradient(135deg, rgba(201,150,42,0.1), var(--black2)); }
-.rate-karat { font-family: var(--font-display); font-size: 1.3rem; color: var(--gold-light); font-weight: 700; letter-spacing: 0.1em; }
-.rate-price { font-family: var(--font-display); font-size: 1.8rem; color: var(--white); font-weight: 700; margin: 0.3rem 0; }
-.rate-per { font-size: 0.7rem; color: #666; font-family: var(--font-sans); letter-spacing: 0.05em; }
-.rate-change { display: flex; align-items: center; justify-content: center; gap: 0.3rem; font-size: 0.75rem; margin-top: 0.4rem; font-family: var(--font-sans); }
-.change-up { color: #4caf50; }
-.change-down { color: #f44336; }
-.rate-badge {
-  position: absolute; top: 0.5rem; right: 0.5rem;
-  background: var(--gold);
-  color: #000;
-  font-size: 0.55rem;
-  font-weight: 700;
-  padding: 0.15rem 0.4rem;
-  border-radius: 3px;
-  letter-spacing: 0.05em;
-  font-family: var(--font-sans);
-}
-.live-indicator {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.25rem 0.8rem;
-  background: rgba(76,175,80,0.1);
-  border: 1px solid rgba(76,175,80,0.3);
-  border-radius: 20px;
-  font-size: 0.72rem;
-  color: #4caf50;
-  font-family: var(--font-sans);
-  margin: 0 auto 1.5rem;
-  display: flex;
-  width: fit-content;
-}
-.live-dot { width: 6px; height: 6px; border-radius: 50%; background: #4caf50; animation: blink 1s ease-in-out infinite; }
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
-/* ===== SECTION COMMON ===== */
-.section-header { text-align: center; margin-bottom: 3rem; }
-.section-tag-line {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  color: var(--gold);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 0.7rem;
-}
-.section-tag-line::before, .section-tag-line::after {
-  content: '';
-  width: 30px; height: 1px;
-  background: var(--gold);
-  opacity: 0.5;
-}
-.section-title-main {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 700;
-  color: var(--black);
-  letter-spacing: 0.05em;
-}
-.section-title-dark { color: var(--gold-light); }
-.section-subtitle { color: var(--text-muted); font-family: var(--font-body); font-size: 1.05rem; margin-top: 0.5rem; font-style: italic; }
-.divider-gold {
-  width: 60px; height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: 1rem auto;
-}
-
-/* ===== CALCULATOR ===== */
-#calculator {
-  background: var(--cream);
-  padding: 5rem 2rem;
-  position: relative;
-}
-#calculator::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='1' fill='%23C9962A' opacity='0.15'/%3E%3C/svg%3E");
-  background-size: 30px 30px;
-}
-.calc-inner { max-width: 1100px; margin: 0 auto; position: relative; }
-.calc-tabs { display: flex; gap: 0; margin-bottom: 2rem; border: 1px solid rgba(201,150,42,0.3); border-radius: 6px; overflow: hidden; }
-.calc-tab {
-  flex: 1;
-  padding: 0.75rem;
-  background: transparent;
-  border: none;
-  color: var(--text-muted);
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-  letter-spacing: 0.05em;
-}
-.calc-tab.active { background: var(--gold); color: #000; }
-.calc-panel { display: none; }
-.calc-panel.active { display: block; }
-.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-.calc-card {
-  background: #fff;
-  border: 1px solid rgba(201,150,42,0.2);
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-}
-.calc-card h4 {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  color: var(--gold-dark);
-  margin-bottom: 1.2rem;
-  letter-spacing: 0.05em;
-}
-.form-label-gold {
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.4rem;
-  display: block;
-}
-.form-control-gold {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid rgba(201,150,42,0.3);
-  border-radius: 6px;
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  background: var(--cream);
-  color: var(--text-dark);
-  outline: none;
-  transition: border-color 0.2s;
-}
-.form-control-gold:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,150,42,0.1); }
-select.form-control-gold { cursor: pointer; }
-.calc-result {
-  margin-top: 1.2rem;
-  padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, rgba(201,150,42,0.1), rgba(201,150,42,0.05));
-  border: 1px solid rgba(201,150,42,0.3);
-  border-radius: 8px;
-  font-family: var(--font-display);
-}
-.calc-result-label { font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
-.calc-result-value { font-size: 1.8rem; color: var(--gold-dark); font-weight: 700; }
-.calc-result-sub { font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-sans); }
-.karat-results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-top: 1rem; }
-.karat-result-item {
-  text-align: center;
-  padding: 0.8rem 0.5rem;
-  background: var(--cream);
-  border: 1px solid rgba(201,150,42,0.2);
-  border-radius: 6px;
-}
-.karat-result-item .k-label { font-size: 0.68rem; color: var(--text-muted); font-family: var(--font-sans); text-transform: uppercase; }
-.karat-result-item .k-val { font-size: 1rem; color: var(--gold-dark); font-family: var(--font-display); font-weight: 700; }
-
-/* ===== PRODUCTS ===== */
-#products { padding: 5rem 2rem; background: var(--white); }
-.products-inner { max-width: 1400px; margin: 0 auto; }
-.category-tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 2.5rem; }
-.cat-tab {
-  padding: 0.5rem 1.4rem;
-  border: 1px solid rgba(201,150,42,0.3);
-  background: transparent;
-  color: var(--text-muted);
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 20px;
-  transition: all 0.2s;
-  letter-spacing: 0.05em;
-}
-.cat-tab:hover, .cat-tab.active { background: var(--gold); color: #000; border-color: var(--gold); }
-.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
-.product-card {
-  background: #fff;
-  border: 1px solid rgba(201,150,42,0.15);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.3s;
-  cursor: pointer;
-  position: relative;
-}
-.product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(201,150,42,0.2); border-color: var(--gold); }
-.product-img {
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(135deg, #f8f0d8, #f0e5c0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  position: relative;
-  overflow: hidden;
-}
-.product-img::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(201,150,42,0.05), transparent);
-}
-.product-badge-purity {
-  position: absolute; top: 0.75rem; left: 0.75rem;
-  background: var(--gold);
-  color: #000;
-  font-size: 0.62rem;
-  font-weight: 700;
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
-  font-family: var(--font-sans);
-  letter-spacing: 0.05em;
-}
-.wishlist-btn {
-  position: absolute; top: 0.75rem; right: 0.75rem;
-  background: rgba(255,255,255,0.9);
-  border: none;
-  width: 32px; height: 32px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  font-size: 0.85rem;
-  color: #ccc;
-  transition: all 0.2s;
-}
-.wishlist-btn:hover, .wishlist-btn.active { color: #e53935; }
-.product-info { padding: 1.2rem; }
-.product-name { font-family: var(--font-body); font-size: 1.05rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.4rem; }
-.product-weight { font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-sans); margin-bottom: 0.6rem; }
-.product-price-row { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.8rem; }
-.product-price { font-family: var(--font-display); font-size: 1.3rem; color: var(--gold-dark); font-weight: 700; }
-.product-making { font-size: 0.68rem; color: var(--text-muted); font-family: var(--font-sans); text-align: right; }
-.product-actions { display: flex; gap: 0.5rem; }
-.btn-add-cart {
-  flex: 1;
-  padding: 0.6rem;
-  background: var(--gold);
-  color: #000;
-  border: none;
-  border-radius: 6px;
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s;
-  letter-spacing: 0.05em;
-}
-.btn-add-cart:hover { background: var(--gold-dark); color: var(--white); }
-.btn-whatsapp-p {
-  padding: 0.6rem 0.8rem;
-  background: #25D366;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  transition: all 0.2s;
-}
-.btn-whatsapp-p:hover { background: #128C7E; }
-
-/* ===== TRUST SECTION ===== */
-#trust {
-  background: var(--black);
-  padding: 5rem 2rem;
-  position: relative;
-  overflow: hidden;
-}
-#trust::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 15 L45 15 L37 22 L40 32 L30 26 L20 32 L23 22 L15 15 L25 15 Z' fill='none' stroke='%23C9962A' stroke-width='0.5' opacity='0.12'/%3E%3C/svg%3E");
-  background-size: 60px 60px;
-}
-.trust-inner { max-width: 1200px; margin: 0 auto; position: relative; }
-.trust-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
-.trust-stat {
-  text-align: center;
-  padding: 2rem 1rem;
-  border: 1px solid rgba(201,150,42,0.2);
-  border-radius: 8px;
-  background: rgba(201,150,42,0.04);
-  transition: all 0.3s;
-}
-.trust-stat:hover { border-color: var(--gold); transform: translateY(-4px); }
-.trust-stat-num { font-family: var(--font-display); font-size: 3rem; color: var(--gold-light); font-weight: 700; line-height: 1; }
-.trust-stat-unit { font-size: 1.2rem; color: var(--gold); }
-.trust-stat-label { font-family: var(--font-sans); font-size: 0.78rem; color: #888; text-transform: uppercase; letter-spacing: 0.12em; margin-top: 0.5rem; }
-.trust-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
-.trust-feature {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-.trust-icon {
-  width: 48px; height: 48px;
-  background: linear-gradient(135deg, rgba(201,150,42,0.2), rgba(201,150,42,0.05));
-  border: 1px solid rgba(201,150,42,0.3);
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-.trust-feature h5 { font-family: var(--font-sans); font-size: 0.88rem; font-weight: 700; color: var(--white); margin-bottom: 0.25rem; }
-.trust-feature p { font-size: 0.78rem; color: #666; font-family: var(--font-sans); line-height: 1.5; }
-
-/* ===== REVIEWS ===== */
-#reviews { padding: 5rem 2rem; background: var(--cream); position: relative; }
-.reviews-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-.review-card {
-  background: #fff;
-  border: 1px solid rgba(201,150,42,0.15);
-  border-radius: 12px;
-  padding: 2rem;
-  position: relative;
-  transition: all 0.3s;
-}
-.review-card::before { content: '"'; position: absolute; top: 1rem; left: 1.2rem; font-size: 4rem; color: rgba(201,150,42,0.15); font-family: Georgia, serif; line-height: 1; }
-.review-card:hover { box-shadow: 0 10px 30px rgba(201,150,42,0.15); transform: translateY(-3px); }
-.review-stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 0.8rem; }
-.review-text { font-family: var(--font-body); font-size: 1rem; color: var(--text-muted); line-height: 1.7; font-style: italic; margin-bottom: 1.2rem; }
-.review-author { display: flex; align-items: center; gap: 0.7rem; }
-.review-avatar {
-  width: 40px; height: 40px;
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display);
-  font-size: 1rem;
-  color: #000;
-  font-weight: 700;
-}
-.review-name { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 700; color: var(--text-dark); }
-.review-location { font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-sans); }
-
-/* ===== OFFERS BANNER ===== */
-#offers {
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, #0A0A0A, #1A1000, #0A0A0A);
-  position: relative;
-  overflow: hidden;
-}
-.offers-inner { max-width: 1200px; margin: 0 auto; }
-.offers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-.offer-card {
-  background: linear-gradient(135deg, rgba(201,150,42,0.15), rgba(201,150,42,0.05));
-  border: 1px solid rgba(201,150,42,0.3);
-  border-radius: 12px;
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-.offer-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: conic-gradient(transparent 270deg, rgba(201,150,42,0.08), transparent); animation: rotateOffer 6s linear infinite; }
-@keyframes rotateOffer { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-.offer-card:hover { transform: translateY(-4px); border-color: var(--gold); }
-.offer-emoji { font-size: 2.5rem; margin-bottom: 0.5rem; display: block; }
-.offer-title { font-family: var(--font-display); font-size: 1.1rem; color: var(--gold-light); font-weight: 700; margin-bottom: 0.5rem; }
-.offer-desc { font-size: 0.82rem; color: #888; font-family: var(--font-sans); line-height: 1.5; }
-.offer-tag { display: inline-block; margin-top: 0.8rem; padding: 0.2rem 0.8rem; background: var(--gold); color: #000; font-size: 0.7rem; font-weight: 700; border-radius: 20px; font-family: var(--font-sans); }
-
-/* ===== FOOTER ===== */
-footer {
-  background: var(--black);
-  border-top: 1px solid rgba(201,150,42,0.2);
-  padding: 4rem 2rem 1.5rem;
-}
-.footer-inner { max-width: 1400px; margin: 0 auto; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
-.footer-brand .logo-main { font-size: 1.3rem; margin-bottom: 0.3rem; }
-.footer-tagline { color: #666; font-size: 0.82rem; font-family: var(--font-sans); margin-top: 0.8rem; line-height: 1.7; max-width: 300px; }
-.footer-heading { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem; }
-.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-.footer-links a { color: #666; text-decoration: none; font-size: 0.82rem; font-family: var(--font-sans); transition: color 0.2s; }
-.footer-links a:hover { color: var(--gold-light); }
-.footer-contact p { color: #666; font-size: 0.82rem; font-family: var(--font-sans); line-height: 1.8; }
-.footer-contact p i { color: var(--gold); width: 16px; }
-.footer-social { display: flex; gap: 0.75rem; margin-top: 1rem; }
-.social-btn {
-  width: 36px; height: 36px;
-  background: var(--charcoal);
-  border: 1px solid rgba(201,150,42,0.2);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: #888;
-  text-decoration: none;
-  font-size: 0.85rem;
-  transition: all 0.2s;
-}
-.social-btn:hover { background: var(--gold); color: #000; border-color: var(--gold); }
-.footer-map {
-  width: 100%;
-  height: 140px;
-  background: var(--charcoal);
-  border: 1px solid rgba(201,150,42,0.2);
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  color: #555;
-  font-size: 0.8rem;
-  font-family: var(--font-sans);
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.2s;
-  margin-top: 1rem;
-}
-.footer-map:hover { border-color: var(--gold); color: var(--gold); }
-.footer-bottom {
-  border-top: 1px solid rgba(201,150,42,0.1);
-  padding-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.footer-bottom p { font-size: 0.75rem; color: #444; font-family: var(--font-sans); }
-
-/* ===== WHATSAPP FLOAT ===== */
-#wa-float {
-  position: fixed;
-  bottom: 2rem; right: 2rem;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.5rem;
-}
-.wa-btn {
-  width: 58px; height: 58px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.6rem;
-  cursor: pointer;
-  box-shadow: 0 8px 25px rgba(37,211,102,0.4);
-  transition: all 0.3s;
-  border: none;
-  color: #fff;
-  animation: waPulse 2s ease-in-out infinite;
-}
-.wa-btn:hover { transform: scale(1.1); box-shadow: 0 12px 35px rgba(37,211,102,0.5); }
-@keyframes waPulse { 0%,100%{box-shadow:0 8px 25px rgba(37,211,102,0.4)} 50%{box-shadow:0 8px 40px rgba(37,211,102,0.7)} }
-.wa-label {
-  background: var(--black);
-  color: var(--gold-light);
-  font-size: 0.7rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: 4px;
-  font-family: var(--font-sans);
-  border: 1px solid rgba(201,150,42,0.2);
-}
-
-/* ===== MODALS ===== */
-.modal-overlay {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,0.8);
-  z-index: 2000;
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0; pointer-events: none;
-  transition: opacity 0.3s;
-  backdrop-filter: blur(5px);
-}
-.modal-overlay.open { opacity: 1; pointer-events: all; }
-.modal-box {
-  background: var(--black2);
-  border: 1px solid rgba(201,150,42,0.3);
-  border-radius: 16px;
-  padding: 2.5rem;
-  width: 90%;
-  max-width: 480px;
-  position: relative;
-  transform: translateY(20px);
-  transition: transform 0.3s;
-}
-.modal-overlay.open .modal-box { transform: translateY(0); }
-.modal-close {
-  position: absolute; top: 1rem; right: 1rem;
-  background: none; border: none; color: #666; font-size: 1.2rem; cursor: pointer;
-}
-.modal-close:hover { color: var(--gold); }
-.modal-title { font-family: var(--font-display); font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.3rem; }
-.modal-sub { font-size: 0.8rem; color: #666; font-family: var(--font-sans); margin-bottom: 1.5rem; }
-.modal-tabs { display: flex; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(201,150,42,0.2); }
-.modal-tab { padding: 0.6rem 1.2rem; background: none; border: none; color: #666; font-family: var(--font-sans); font-size: 0.85rem; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; }
-.modal-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
-.modal-panel { display: none; }
-.modal-panel.active { display: block; }
-.input-group-gold { margin-bottom: 1rem; }
-.input-gold {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  background: var(--black3);
-  border: 1px solid rgba(201,150,42,0.2);
-  border-radius: 6px;
-  color: var(--white);
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  outline: none;
-  transition: border-color 0.2s;
-}
-.input-gold:focus { border-color: var(--gold); }
-.input-gold::placeholder { color: #444; }
-
-/* ===== CART SIDEBAR ===== */
-#cart-sidebar {
-  position: fixed;
-  top: 0; right: -420px;
-  width: 420px;
-  height: 100vh;
-  background: var(--black2);
-  border-left: 1px solid rgba(201,150,42,0.2);
-  z-index: 3000;
-  transition: right 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-  display: flex;
-  flex-direction: column;
-  box-shadow: -20px 0 60px rgba(0,0,0,0.5);
-}
-#cart-sidebar.open { right: 0; }
-.cart-overlay {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 2999;
-  display: none;
-}
-.cart-overlay.open { display: block; }
-.cart-header {
-  padding: 1.5rem;
-  border-bottom: 1px solid rgba(201,150,42,0.2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.cart-title { font-family: var(--font-display); font-size: 1.2rem; color: var(--gold-light); }
-.cart-items { flex: 1; overflow-y: auto; padding: 1rem; }
-.cart-item {
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
-  border: 1px solid rgba(201,150,42,0.1);
-  border-radius: 8px;
-  margin-bottom: 0.8rem;
-  background: var(--black3);
-}
-.cart-item-img { width: 60px; height: 60px; background: linear-gradient(135deg, #f8f0d8, #f0e5c0); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0; }
-.cart-item-info { flex: 1; }
-.cart-item-name { font-family: var(--font-sans); font-size: 0.85rem; color: var(--white); font-weight: 600; }
-.cart-item-weight { font-size: 0.72rem; color: #666; font-family: var(--font-sans); }
-.cart-item-price { font-family: var(--font-display); font-size: 1rem; color: var(--gold); }
-.cart-remove { background: none; border: none; color: #444; cursor: pointer; font-size: 0.85rem; padding: 0.2rem; transition: color 0.2s; }
-.cart-remove:hover { color: #f44336; }
-.cart-footer {
-  padding: 1.5rem;
-  border-top: 1px solid rgba(201,150,42,0.2);
-}
-.cart-total { display: flex; justify-content: space-between; margin-bottom: 1rem; }
-.cart-total-label { font-family: var(--font-sans); font-size: 0.82rem; color: #888; }
-.cart-total-val { font-family: var(--font-display); font-size: 1.3rem; color: var(--gold-light); font-weight: 700; }
-.btn-checkout { width: 100%; padding: 1rem; background: var(--gold); color: #000; border: none; border-radius: 6px; font-family: var(--font-sans); font-size: 0.88rem; font-weight: 700; cursor: pointer; letter-spacing: 0.08em; transition: all 0.2s; }
-.btn-checkout:hover { background: var(--gold-dark); color: var(--white); }
-.btn-whatsapp-cart { width: 100%; padding: 0.8rem; background: #25D366; color: #fff; border: none; border-radius: 6px; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; cursor: pointer; margin-top: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
-
-/* ===== ADMIN PANEL ===== */
-#admin-panel {
-  display: none;
-  position: fixed; inset: 0;
-  z-index: 5000;
-  background: #0d1117;
-  overflow-y: auto;
-  padding: 2rem;
-}
-#admin-panel.open { display: block; }
-.admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(201,150,42,0.2); }
-.admin-title { font-family: var(--font-display); font-size: 1.5rem; color: var(--gold-light); }
-.admin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
-.admin-stat {
-  background: #111;
-  border: 1px solid rgba(201,150,42,0.2);
-  border-radius: 8px;
-  padding: 1.5rem;
-  text-align: center;
-}
-.admin-stat-num { font-family: var(--font-display); font-size: 2.5rem; color: var(--gold); }
-.admin-stat-label { font-size: 0.75rem; color: #666; font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.1em; }
-.admin-section { background: #111; border: 1px solid rgba(201,150,42,0.15); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
-.admin-section-title { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.2rem; }
-.admin-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 0.82rem; }
-.admin-table th { color: var(--gold); padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid rgba(201,150,42,0.2); font-weight: 600; letter-spacing: 0.06em; font-size: 0.72rem; }
-.admin-table td { color: #888; padding: 0.7rem 0.75rem; border-bottom: 1px solid rgba(201,150,42,0.07); }
-.admin-table tr:hover td { color: var(--white); background: rgba(201,150,42,0.04); }
-.admin-action-btn { background: none; border: 1px solid rgba(201,150,42,0.3); color: var(--gold); padding: 0.2rem 0.6rem; border-radius: 3px; font-size: 0.7rem; cursor: pointer; font-family: var(--font-sans); transition: all 0.2s; margin-right: 0.3rem; }
-.admin-action-btn:hover { background: var(--gold); color: #000; }
-.admin-action-btn.danger { border-color: rgba(244,67,54,0.4); color: #f44336; }
-.admin-action-btn.danger:hover { background: #f44336; color: #fff; }
-
-/* ===== ANIMATIONS ===== */
-.fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.fade-up.visible { opacity: 1; transform: translateY(0); }
-.counter { transition: all 0.3s; }
-
-/* ===== TOAST ===== */
-#toast {
-  position: fixed; bottom: 5rem; left: 50%; transform: translateX(-50%) translateY(100px);
-  background: var(--black);
-  border: 1px solid rgba(201,150,42,0.4);
-  color: var(--gold-light);
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  z-index: 4000;
-  transition: transform 0.4s;
-  white-space: nowrap;
-}
-#toast.show { transform: translateX(-50%) translateY(0); }
-
-/* ===== MOBILE ===== */
-@media(max-width:1100px) {
-  .hero-jewelry-showcase { display: none; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-@media(max-width:768px) {
-  nav { display: none; }
-  .hamburger { display: block; }
-  .header-inner { padding: 0.7rem 1rem; }
-  .logo-main { font-size: 0.85rem; }
-  .hero-title { font-size: 2.2rem; }
-  .calc-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-  #cart-sidebar { width: 100%; right: -100%; }
-  .karat-results { grid-template-columns: 1fr 1fr 1fr; }
-  section { padding: 3rem 1rem; }
-  .rates-grid { grid-template-columns: 1fr 1fr; }
-}
-</style>
+<link rel="stylesheet" href="css/main.css"/>
+<link rel="stylesheet" href="css/components.css"/>
 </head>
 <body>
 
-<!-- GOLD TICKER -->
+<!-- LIVE RATE TICKER -->
 <div id="gold-ticker">
-  <div class="ticker-inner" id="tickerContent">
-    <span class="ticker-item">🔴 LIVE GOLD RATES – HIRAMANDALAM</span>
-    <span class="ticker-item"><span class="ticker-karat">24K</span> <span class="ticker-price" id="t24k">₹7,420/g</span> <span class="ticker-up" id="t24c">▲ +0.3%</span></span>
-    <span class="ticker-item"><span class="ticker-karat">22K</span> <span class="ticker-price" id="t22k">₹6,802/g</span> <span class="ticker-up">▲ +0.3%</span></span>
-    <span class="ticker-item"><span class="ticker-karat">18K</span> <span class="ticker-price" id="t18k">₹5,565/g</span> <span class="ticker-up">▲ +0.2%</span></span>
-    <span class="ticker-item">🛡️ BIS HALLMARKED GOLD &nbsp;&nbsp; ✓ Transparent Pricing &nbsp;&nbsp; 📍 Hiramandalam, Srikakulam</span>
-    <span class="ticker-item"><span class="ticker-karat">24K</span> <span class="ticker-price">₹7,420/g</span></span>
-    <span class="ticker-item"><span class="ticker-karat">22K</span> <span class="ticker-price">₹6,802/g</span></span>
-    <span class="ticker-item">🎁 Akshaya Tritiya Special — Up to 50% off Making Charges</span>
+  <div class="ticker-track" id="tickerTrack">
+    <span class="tick-item">🔴 LIVE GOLD RATES – HIRAMANDALAM, SRIKAKULAM</span>
+    <span class="tick-item">24K: <strong id="t24">₹7,420/g</strong> <span class="up" id="tc24">▲ +₹24</span></span>
+    <span class="tick-item">22K: <strong id="t22">₹6,802/g</strong> <span class="up">▲ +₹22</span></span>
+    <span class="tick-item">18K: <strong id="t18">₹5,565/g</strong> <span class="up">▲ +₹18</span></span>
+    <span class="tick-item">14K: <strong id="t14">₹4,329/g</strong></span>
+    <span class="tick-item">🛡️ BIS HALLMARKED | ✅ Transparent Pricing | 📍 Hiramandalam</span>
+    <span class="tick-item">🎁 Akshaya Tritiya — 50% off Making Charges!</span>
+    <span class="tick-item">24K: <strong>₹7,420/g</strong></span>
+    <span class="tick-item">22K: <strong>₹6,802/g</strong></span>
   </div>
 </div>
 
 <!-- HEADER -->
-<div id="mainHeader">
-  <header>
-    <div class="header-inner">
-      <a href="#hero" class="logo-wrap">
-        <div class="logo-icon">🛕</div>
-        <div class="logo-text">
-          <span class="logo-main">SRI TIRUMALA JEWELLERS</span>
-          <span class="logo-sub">Hiramandalam, Srikakulam • Est. 1998</span>
-        </div>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#products">Collections</a></li>
-          <li><a href="#gold-rates">Gold Rate</a></li>
-          <li><a href="#calculator">Calculator</a></li>
-          <li><a href="#offers">Offers</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="lang-toggle" onclick="toggleLang()" title="Telugu / English">తె | EN</button>
-        <button class="btn-icon" onclick="openWishlist()" title="Wishlist"><i class="fas fa-heart"></i></button>
-        <button class="btn-icon" onclick="openCart()" title="Cart">
-          <i class="fas fa-shopping-bag"></i>
-          <span class="cart-count" id="cartCount">0</span>
-        </button>
-        <button class="btn-login" id="loginBtn" onclick="openLogin()">Login</button>
-        <button class="hamburger" onclick="toggleMobile()"><i class="fas fa-bars"></i></button>
+<header id="siteHeader">
+  <div class="header-wrap">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">🛕</div>
+      <div>
+        <div class="logo-name">SRI TIRUMALA JEWELLERS</div>
+        <div class="logo-place">Hiramandalam, Srikakulam · Est. 1998</div>
       </div>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="pages/shop.html" class="nav-link">Shop</a>
+      <div class="nav-dropdown">
+        <a class="nav-link">Collections <i class="fas fa-chevron-down" style="font-size:0.65rem"></i></a>
+        <div class="dropdown-menu">
+          <a href="pages/shop.html?cat=rings">💍 Rings</a>
+          <a href="pages/shop.html?cat=chains">📿 Chains</a>
+          <a href="pages/shop.html?cat=bangles">🔮 Bangles</a>
+          <a href="pages/shop.html?cat=earrings">✨ Earrings</a>
+          <a href="pages/shop.html?cat=pendants">🌟 Pendants</a>
+          <a href="pages/shop.html?cat=bridal">👑 Bridal Sets</a>
+        </div>
+      </div>
+      <a href="pages/rates.html" class="nav-link">Gold Rate</a>
+      <a href="pages/calculator.html" class="nav-link">Calculator</a>
+      <a href="pages/offers.html" class="nav-link">Offers</a>
+      <a href="pages/about.html" class="nav-link">About</a>
+      <a href="pages/contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-btn" onclick="STJ.toggleLang()" title="Telugu/English">తె | EN</button>
+      <div class="search-wrap">
+        <input type="text" id="headerSearch" placeholder="Search jewellery..." class="search-input" onkeyup="STJ.searchProducts(this.value)" onfocus="document.getElementById('searchDrop').classList.add('open')" onblur="setTimeout(()=>document.getElementById('searchDrop').classList.remove('open'),200)"/>
+        <i class="fas fa-search search-icon"></i>
+        <div class="search-dropdown" id="searchDrop"></div>
+      </div>
+      <button class="icon-btn" onclick="STJ.toggleWishlist()" title="Wishlist">
+        <i class="fas fa-heart"></i>
+        <span class="badge" id="wishCount">0</span>
+      </button>
+      <button class="icon-btn" onclick="STJ.openCart()" title="Cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="badge" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn" onclick="STJ.openAccount()" title="Account" id="accountBtn">
+        <i class="fas fa-user"></i>
+      </button>
+      <button class="hamburger" onclick="STJ.toggleMenu()"><i class="fas fa-bars"></i></button>
     </div>
-    <div class="mobile-nav" id="mobileNav">
-      <ul>
-        <li><a href="#hero" onclick="closeMobile()">🏠 Home</a></li>
-        <li><a href="#products" onclick="closeMobile()">💎 Collections</a></li>
-        <li><a href="#gold-rates" onclick="closeMobile()">📊 Gold Rate</a></li>
-        <li><a href="#calculator" onclick="closeMobile()">🧮 Calculator</a></li>
-        <li><a href="#offers" onclick="closeMobile()">🎁 Offers</a></li>
-        <li><a href="#contact" onclick="closeMobile()">📍 Contact</a></li>
-      </ul>
-    </div>
-  </header>
-</div>
+  </div>
+</header>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-bg-pattern"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-particles" id="heroParticles"></div>
   <div class="hero-content">
-    <div class="hero-tag" data-en="Established 1998 · BIS Hallmarked · Srikakulam" data-te="1998 నుండి · BIS హాల్‌మార్క్ · శ్రీకాకుళం">
-      ✦ Established 1998 · BIS Hallmarked · Srikakulam
-    </div>
-    <h1 class="hero-title">
-      <span data-en="Trusted Gold Jewellery" data-te="విశ్వసనీయమైన బంగారు నగలు">Trusted Gold Jewellery</span>
-      <span class="gold-line" data-en="in Hiramandalam" data-te="హిరమండలంలో">in Hiramandalam</span>
+    <div class="hero-badge animate-fade-up">✦ Established 1998 · BIS Hallmarked · Srikakulam District</div>
+    <h1 class="hero-title animate-fade-up delay-1">
+      <span data-en="Hiramandalam's Most" data-te="హిరమండలం యొక్క అత్యుత్తమ">Hiramandalam's Most</span><br>
+      <span class="gold-shimmer" data-en="Trusted Gold Shop" data-te="విశ్వసనీయ బంగారు అంగడి">Trusted Gold Shop</span>
     </h1>
-    <p class="hero-subtitle" data-en="Pure Gold. Transparent Pricing. Trusted Service." data-te="స్వచ్ఛమైన బంగారం. పారదర్శక ధరలు. నమ్మకమైన సేవ.">
-      Pure Gold. Transparent Pricing. Trusted Service.
+    <p class="hero-sub animate-fade-up delay-2" data-en="Pure Gold. Transparent Pricing. BIS Hallmarked. Loved by 5000+ families across Srikakulam district." data-te="స్వచ్ఛమైన బంగారం. పారదర్శక ధరలు. 5000+ కుటుంబాల విశ్వాసం.">
+      Pure Gold. Transparent Pricing. BIS Hallmarked. Loved by 5000+ families across Srikakulam district.
     </p>
-    <div class="hero-badges">
-      <span class="hero-badge">🏆 BIS Hallmark Certified</span>
-      <span class="hero-badge">💯 100% Pure Gold</span>
-      <span class="hero-badge">📍 Hiramandalam, SKL</span>
-      <span class="hero-badge">💰 Live Rate Pricing</span>
+    <div class="hero-rate-card animate-fade-up delay-3">
+      <div class="live-badge"><span class="live-dot"></span> LIVE RATE</div>
+      <div class="rate-row"><span>22K Today</span><strong id="hero22k">₹6,802/g</strong></div>
+      <div class="rate-row"><span>24K Today</span><strong id="hero24k">₹7,420/g</strong></div>
+      <div class="rate-updated" id="heroUpdated">Updating...</div>
     </div>
-    <div class="hero-btns">
-      <a href="#products" class="btn-gold"><i class="fas fa-gem"></i> View Collections</a>
-      <a href="#calculator" class="btn-outline-gold"><i class="fas fa-calculator"></i> Gold Calculator</a>
+    <div class="hero-btns animate-fade-up delay-4">
+      <a href="pages/shop.html" class="btn-primary"><i class="fas fa-gem"></i> Shop Now</a>
+      <a href="pages/calculator.html" class="btn-outline"><i class="fas fa-calculator"></i> Calculate Price</a>
+      <a href="https://wa.me/919014457855" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Order</a>
     </div>
-    <div class="trust-stats" style="margin-top:2.5rem; border-top: 1px solid rgba(201,150,42,0.2); padding-top: 2rem; display:grid; grid-template-columns: repeat(3,1fr); max-width: 500px; gap:2rem;">
-      <div style="text-align:center">
-        <div style="font-family:var(--font-display); font-size:2rem; color:var(--gold-light); font-weight:700;">25+</div>
-        <div style="font-size:0.7rem; color:#666; font-family:var(--font-sans); text-transform:uppercase; letter-spacing:0.1em; margin-top:0.2rem;">Years</div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-family:var(--font-display); font-size:2rem; color:var(--gold-light); font-weight:700;">5000+</div>
-        <div style="font-size:0.7rem; color:#666; font-family:var(--font-sans); text-transform:uppercase; letter-spacing:0.1em; margin-top:0.2rem;">Customers</div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-family:var(--font-display); font-size:2rem; color:var(--gold-light); font-weight:700;">100%</div>
-        <div style="font-size:0.7rem; color:#666; font-family:var(--font-sans); text-transform:uppercase; letter-spacing:0.1em; margin-top:0.2rem;">Pure Gold</div>
-      </div>
+    <div class="hero-stats animate-fade-up delay-5">
+      <div class="stat"><span class="stat-num">25+</span><span class="stat-label">Years</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">5000+</span><span class="stat-label">Customers</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">1200+</span><span class="stat-label">Designs</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Pure Gold</span></div>
     </div>
   </div>
-  <!-- Floating jewelry cards -->
-  <div class="hero-jewelry-showcase">
-    <div class="jewelry-card-mini"><div class="jewelry-emoji">💍</div><div class="jewelry-label">Rings</div></div>
-    <div class="jewelry-card-mini"><div class="jewelry-emoji">📿</div><div class="jewelry-label">Chains</div></div>
-    <div class="jewelry-card-mini"><div class="jewelry-emoji">🔮</div><div class="jewelry-label">Bangles</div></div>
-    <div class="jewelry-card-mini"><div class="jewelry-emoji">✨</div><div class="jewelry-label">Earrings</div></div>
+  <div class="hero-jewelry-grid">
+    <div class="jcard" style="animation-delay:0s"><div class="jcard-emoji">💍</div><div class="jcard-label">Rings</div><div class="jcard-price" id="jring">₹28,490</div></div>
+    <div class="jcard" style="animation-delay:0.3s"><div class="jcard-emoji">📿</div><div class="jcard-label">Chains</div><div class="jcard-price" id="jchain">₹54,416</div></div>
+    <div class="jcard" style="animation-delay:0.6s"><div class="jcard-emoji">🔮</div><div class="jcard-label">Bangles</div><div class="jcard-price" id="jbangle">₹1,70,050</div></div>
+    <div class="jcard" style="animation-delay:0.9s"><div class="jcard-emoji">✨</div><div class="jcard-label">Earrings</div><div class="jcard-price" id="jear">₹17,005</div></div>
   </div>
 </section>
 
-<!-- LIVE GOLD RATES -->
-<section id="gold-rates">
-  <div class="rates-inner">
-    <div class="section-tag-line" style="justify-content:center; display:flex; color:var(--gold)">Live Market Data</div>
-    <h2 class="rates-title">Today's Gold Rates</h2>
-    <p class="rates-subtitle">Hiramandalam, Srikakulam — Updated every 5 minutes</p>
-    <div class="live-indicator"><span class="live-dot"></span> LIVE — Auto-refreshing</div>
-    <p class="last-updated" id="lastUpdated">Last updated: —</p>
-    <div class="rates-grid" id="ratesGrid">
-      <div class="rate-card featured">
-        <span class="rate-badge">MOST POPULAR</span>
-        <div class="rate-karat">22 Karat</div>
-        <div class="rate-price" id="r22k">₹6,802</div>
-        <div class="rate-per">per gram · today</div>
-        <div class="rate-change"><i class="fas fa-arrow-up change-up"></i><span class="change-up" id="c22k">+₹22 today</span></div>
+<!-- LIVE RATES SECTION -->
+<section class="section-rates">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-tag">Live Market Prices</div>
+      <h2 class="sec-title">Today's Gold Rates</h2>
+      <div class="sec-line"></div>
+      <p class="sec-sub">Hiramandalam, Srikakulam — <span id="rateSource">Auto-updating every 30 seconds</span></p>
+    </div>
+    <div class="live-badge-center"><span class="live-dot"></span> LIVE &nbsp;|&nbsp; <span id="mainLastUpdated">Connecting...</span></div>
+    <div class="rates-grid" id="mainRatesGrid">
+      <div class="rate-card featured" id="rc22">
+        <div class="rc-top"><span class="rc-badge">MOST POPULAR</span></div>
+        <div class="rc-karat">22 Karat</div>
+        <div class="rc-price" id="main22k">₹6,802</div>
+        <div class="rc-unit">per gram · today</div>
+        <div class="rc-change up" id="ch22k"><i class="fas fa-arrow-up"></i> +₹22 today</div>
+        <div class="rc-purity">91.6% Pure</div>
       </div>
-      <div class="rate-card">
-        <div class="rate-karat">24 Karat</div>
-        <div class="rate-price" id="r24k">₹7,420</div>
-        <div class="rate-per">per gram · today</div>
-        <div class="rate-change" id="c24k"><i class="fas fa-arrow-up change-up"></i><span class="change-up">+₹24 today</span></div>
+      <div class="rate-card" id="rc24">
+        <div class="rc-karat">24 Karat</div>
+        <div class="rc-price" id="main24k">₹7,420</div>
+        <div class="rc-unit">per gram · today</div>
+        <div class="rc-change up" id="ch24k"><i class="fas fa-arrow-up"></i> +₹24 today</div>
+        <div class="rc-purity">99.9% Pure</div>
       </div>
-      <div class="rate-card">
-        <div class="rate-karat">20 Karat</div>
-        <div class="rate-price" id="r20k">₹6,183</div>
-        <div class="rate-per">per gram · today</div>
-        <div class="rate-change"><i class="fas fa-arrow-up change-up"></i><span class="change-up">+₹20 today</span></div>
+      <div class="rate-card" id="rc20">
+        <div class="rc-karat">20 Karat</div>
+        <div class="rc-price" id="main20k">₹6,183</div>
+        <div class="rc-unit">per gram · today</div>
+        <div class="rc-change up"><i class="fas fa-arrow-up"></i> +₹20 today</div>
+        <div class="rc-purity">83.3% Pure</div>
       </div>
-      <div class="rate-card">
-        <div class="rate-karat">18 Karat</div>
-        <div class="rate-price" id="r18k">₹5,565</div>
-        <div class="rate-per">per gram · today</div>
-        <div class="rate-change"><i class="fas fa-arrow-up change-up"></i><span class="change-up">+₹18 today</span></div>
+      <div class="rate-card" id="rc18">
+        <div class="rc-karat">18 Karat</div>
+        <div class="rc-price" id="main18k">₹5,565</div>
+        <div class="rc-unit">per gram · today</div>
+        <div class="rc-change up"><i class="fas fa-arrow-up"></i> +₹18 today</div>
+        <div class="rc-purity">75% Pure</div>
       </div>
-      <div class="rate-card">
-        <div class="rate-karat">14 Karat</div>
-        <div class="rate-price" id="r14k">₹4,329</div>
-        <div class="rate-per">per gram · today</div>
-        <div class="rate-change"><i class="fas fa-arrow-up change-up"></i><span class="change-up">+₹14 today</span></div>
+      <div class="rate-card" id="rc14">
+        <div class="rc-karat">14 Karat</div>
+        <div class="rc-price" id="main14k">₹4,329</div>
+        <div class="rc-unit">per gram · today</div>
+        <div class="rc-change up"><i class="fas fa-arrow-up"></i> +₹14 today</div>
+        <div class="rc-purity">58.3% Pure</div>
       </div>
     </div>
-    <p style="text-align:center; color:#444; font-size:0.72rem; font-family:var(--font-sans); margin-top:1.5rem;">
-      * Rates are indicative. Final pricing includes making charges. Call us to confirm today's rate.
-    </p>
+    <div class="rates-disclaimer">* Rates are indicative. Final price includes making charges. <a href="pages/rates.html">View rate history →</a></div>
   </div>
 </section>
 
-<!-- CALCULATOR -->
-<section id="calculator">
-  <div class="calc-inner">
-    <div class="section-header fade-up">
-      <div class="section-tag-line">Smart Tools</div>
-      <h2 class="section-title-main">Gold <span style="color:var(--gold-dark)">Calculator</span></h2>
-      <div class="divider-gold"></div>
-      <p class="section-subtitle">Know the exact price before you buy</p>
+<!-- FEATURED COLLECTIONS -->
+<section class="section-products">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-tag">Handcrafted for You</div>
+      <h2 class="sec-title">Featured Collections</h2>
+      <div class="sec-line"></div>
+      <p class="sec-sub">Prices calculated live from today's gold rate</p>
     </div>
-    <div class="calc-tabs">
-      <button class="calc-tab active" onclick="switchCalcTab('karat')">Karat Converter</button>
-      <button class="calc-tab" onclick="switchCalcTab('buying')">Buying Power</button>
-      <button class="calc-tab" onclick="switchCalcTab('weight')">Weight → Price</button>
+    <div class="cat-tabs" id="homeCatTabs">
+      <button class="cat-btn active" data-cat="all">All</button>
+      <button class="cat-btn" data-cat="rings">💍 Rings</button>
+      <button class="cat-btn" data-cat="chains">📿 Chains</button>
+      <button class="cat-btn" data-cat="bangles">🔮 Bangles</button>
+      <button class="cat-btn" data-cat="earrings">✨ Earrings</button>
+      <button class="cat-btn" data-cat="pendants">🌟 Pendants</button>
     </div>
+    <div class="products-grid" id="featuredGrid"></div>
+    <div class="see-all-wrap">
+      <a href="pages/shop.html" class="btn-primary">View All Collections <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
 
-    <!-- KARAT TAB -->
-    <div class="calc-panel active" id="tab-karat">
-      <div class="calc-grid">
-        <div class="calc-card fade-up">
-          <h4>⚖️ Karat Price Calculator</h4>
-          <label class="form-label-gold">24K Gold Rate (₹/gram)</label>
-          <input type="number" class="form-control-gold" id="base24k" value="7420" oninput="calcKarat()" placeholder="Enter 24K rate"/>
-          <label class="form-label-gold" style="margin-top:1rem">Weight (grams)</label>
-          <input type="number" class="form-control-gold" id="gramWeight" value="10" oninput="calcKarat()" placeholder="Enter weight"/>
-          <div class="karat-results" style="margin-top:1.2rem">
-            <div class="karat-result-item"><div class="k-label">22K</div><div class="k-val" id="res22k">₹68,020</div></div>
-            <div class="karat-result-item"><div class="k-label">20K</div><div class="k-val" id="res20k">₹61,833</div></div>
-            <div class="karat-result-item"><div class="k-label">18K</div><div class="k-val" id="res18k">₹55,650</div></div>
-            <div class="karat-result-item"><div class="k-label">16K</div><div class="k-val" id="res16k">₹49,467</div></div>
-            <div class="karat-result-item"><div class="k-label">14K</div><div class="k-val" id="res14k">₹43,283</div></div>
-            <div class="karat-result-item"><div class="k-label">10K</div><div class="k-val" id="res10k">₹30,917</div></div>
-          </div>
-        </div>
-        <div class="calc-card fade-up">
-          <h4>💍 Jewellery Price Estimator</h4>
-          <label class="form-label-gold">Select Karat</label>
-          <select class="form-control-gold" id="jewKarat" onchange="calcJewellery()">
-            <option value="24">24 Karat (99.9% Pure)</option>
-            <option value="22" selected>22 Karat (91.6% Pure)</option>
-            <option value="20">20 Karat (83.3% Pure)</option>
-            <option value="18">18 Karat (75% Pure)</option>
-          </select>
-          <label class="form-label-gold" style="margin-top:1rem">Weight (grams)</label>
-          <input type="number" class="form-control-gold" id="jewWeight" value="5" oninput="calcJewellery()" placeholder="e.g. 5"/>
-          <label class="form-label-gold" style="margin-top:1rem">Making Charges (₹/gram)</label>
-          <input type="number" class="form-control-gold" id="makingCh" value="350" oninput="calcJewellery()" placeholder="e.g. 350"/>
-          <div class="calc-result" style="margin-top:1rem">
-            <div class="calc-result-label">Estimated Total Price</div>
-            <div class="calc-result-value" id="jewTotal">₹35,760</div>
-            <div class="calc-result-sub" id="jewBreak">Gold: ₹34,010 + Making: ₹1,750</div>
-          </div>
-        </div>
+<!-- CALCULATOR QUICK -->
+<section class="section-calc-quick">
+  <div class="container">
+    <div class="calc-quick-grid">
+      <div class="calc-info">
+        <div class="sec-tag">Smart Tool</div>
+        <h2 class="sec-title" style="text-align:left;color:#fff">Know the Price<br><span class="gold-shimmer">Before You Buy</span></h2>
+        <p style="color:#aaa;font-family:var(--font-sans);line-height:1.7;margin:1rem 0">Enter weight and karat — get the exact gold price in seconds. Updated live from market rates.</p>
+        <a href="pages/calculator.html" class="btn-outline" style="display:inline-flex">Full Calculator <i class="fas fa-arrow-right"></i></a>
       </div>
-    </div>
-
-    <!-- BUYING POWER TAB -->
-    <div class="calc-panel" id="tab-buying">
-      <div class="calc-grid">
-        <div class="calc-card fade-up">
-          <h4>💰 Budget → Grams</h4>
-          <label class="form-label-gold">Your Budget (₹)</label>
-          <input type="number" class="form-control-gold" id="budget" value="50000" oninput="calcBuying()" placeholder="Enter amount"/>
-          <label class="form-label-gold" style="margin-top:1rem">Select Karat</label>
-          <select class="form-control-gold" id="buyKarat" onchange="calcBuying()">
-            <option value="24">24 Karat</option>
-            <option value="22" selected>22 Karat</option>
-            <option value="18">18 Karat</option>
-          </select>
-          <div class="calc-result" style="margin-top:1.2rem">
-            <div class="calc-result-label">You Can Buy Approximately</div>
-            <div class="calc-result-value" id="buyResult">7.35 grams</div>
-            <div class="calc-result-sub" id="buyNote">of 22K gold at ₹6,802/g</div>
+      <div class="calc-quick-card">
+        <h4>⚡ Quick Price Calculator</h4>
+        <div class="qc-row">
+          <div class="qc-field">
+            <label>Karat</label>
+            <select id="qcKarat" onchange="STJ.quickCalc()">
+              <option value="24">24K — 99.9% Pure</option>
+              <option value="22" selected>22K — 91.6% Pure</option>
+              <option value="20">20K — 83.3% Pure</option>
+              <option value="18">18K — 75% Pure</option>
+              <option value="14">14K — 58.3% Pure</option>
+            </select>
+          </div>
+          <div class="qc-field">
+            <label>Weight (grams)</label>
+            <input type="number" id="qcWeight" value="10" min="0.1" oninput="STJ.quickCalc()"/>
           </div>
         </div>
-        <div class="calc-card fade-up">
-          <h4>⚖️ Grams → Price</h4>
-          <label class="form-label-gold">Weight (grams)</label>
-          <input type="number" class="form-control-gold" id="revGrams" value="10" oninput="calcReverse()" placeholder="Enter grams"/>
-          <label class="form-label-gold" style="margin-top:1rem">Select Karat</label>
-          <select class="form-control-gold" id="revKarat" onchange="calcReverse()">
-            <option value="24">24 Karat</option>
-            <option value="22" selected>22 Karat</option>
-            <option value="18">18 Karat</option>
-          </select>
-          <div class="calc-result" style="margin-top:1.2rem">
-            <div class="calc-result-label">Gold Value</div>
-            <div class="calc-result-value" id="revResult">₹68,020</div>
-            <div class="calc-result-sub">Gold price only · Making charges extra</div>
-          </div>
+        <div class="qc-field" style="margin-top:0.8rem">
+          <label>Making Charges (₹/gram)</label>
+          <input type="number" id="qcMaking" value="350" min="0" oninput="STJ.quickCalc()"/>
         </div>
-      </div>
-    </div>
-
-    <!-- WEIGHT TAB -->
-    <div class="calc-panel" id="tab-weight">
-      <div class="calc-card" style="max-width: 500px; margin: 0 auto;">
-        <h4>🔢 Quick Price Lookup</h4>
-        <label class="form-label-gold">Karat</label>
-        <select class="form-control-gold" id="qlKarat" onchange="calcQL()">
-          <option value="24">24 Karat — ₹7,420/g</option>
-          <option value="22" selected>22 Karat — ₹6,802/g</option>
-          <option value="20">20 Karat — ₹6,183/g</option>
-          <option value="18">18 Karat — ₹5,565/g</option>
-        </select>
-        <label class="form-label-gold" style="margin-top:1rem">Weight (grams)</label>
-        <input type="range" min="1" max="100" value="10" class="form-control-gold" style="padding:0.3rem 0; background:transparent; border:none;" id="qlSlider" oninput="syncQL()"/>
-        <input type="number" class="form-control-gold" id="qlWeight" value="10" oninput="calcQL()" placeholder="Or type weight"/>
-        <div class="calc-result" style="margin-top:1rem">
-          <div class="calc-result-label">Gold Price (No Making Charges)</div>
-          <div class="calc-result-value" id="qlResult">₹68,020</div>
+        <div class="qc-result">
+          <div class="qcr-label">Total Estimated Price</div>
+          <div class="qcr-value" id="qcResult">₹72,170</div>
+          <div class="qcr-break" id="qcBreak">Gold: ₹68,020 + Making: ₹3,500 + GST: ₹650</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRODUCTS -->
-<section id="products">
-  <div class="products-inner">
-    <div class="section-header fade-up">
-      <div class="section-tag-line">Handcrafted for You</div>
-      <h2 class="section-title-main">Our <span style="color:var(--gold-dark)">Collections</span></h2>
-      <div class="divider-gold"></div>
-      <p class="section-subtitle">Prices calculated live based on today's gold rate</p>
+<!-- WHY CHOOSE US -->
+<section class="section-trust">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-tag">Why Choose Us</div>
+      <h2 class="sec-title">Serving Hiramandalam with Trust</h2>
+      <div class="sec-line"></div>
+      <p class="sec-sub">Since 1998 — Your family's trusted gold jewellery partner</p>
     </div>
-    <div class="category-tabs">
-      <button class="cat-tab active" onclick="filterCat('all')">All Jewellery</button>
-      <button class="cat-tab" onclick="filterCat('rings')">💍 Rings</button>
-      <button class="cat-tab" onclick="filterCat('chains')">📿 Chains</button>
-      <button class="cat-tab" onclick="filterCat('bangles')">🔮 Bangles</button>
-      <button class="cat-tab" onclick="filterCat('earrings')">✨ Earrings</button>
-      <button class="cat-tab" onclick="filterCat('pendants')">🌟 Pendants</button>
+    <div class="trust-stats">
+      <div class="ts"><div class="ts-num counter" data-to="25">0</div><div class="ts-plus">+</div><div class="ts-lbl">Years of Service</div></div>
+      <div class="ts"><div class="ts-num counter" data-to="5000">0</div><div class="ts-plus">+</div><div class="ts-lbl">Happy Customers</div></div>
+      <div class="ts"><div class="ts-num counter" data-to="100">0</div><div class="ts-plus">%</div><div class="ts-lbl">Pure Gold Assured</div></div>
+      <div class="ts"><div class="ts-num counter" data-to="1200">0</div><div class="ts-plus">+</div><div class="ts-lbl">Designs Available</div></div>
     </div>
-    <div class="products-grid" id="productsGrid">
-      <!-- Products inserted by JS -->
+    <div class="features-grid">
+      <div class="feature-card"><div class="fc-icon">🏅</div><h5>BIS Hallmark Certified</h5><p>Every piece certified for purity. No compromise on quality.</p></div>
+      <div class="feature-card"><div class="fc-icon">💰</div><h5>Transparent Live Pricing</h5><p>Prices calculated live from market rate. No hidden charges.</p></div>
+      <div class="feature-card"><div class="fc-icon">🔄</div><h5>Easy Exchange Policy</h5><p>Exchange your old gold jewellery for new designs at fair rates.</p></div>
+      <div class="feature-card"><div class="fc-icon">📱</div><h5>WhatsApp Orders</h5><p>Order from home. We deliver to your doorstep in Srikakulam.</p></div>
+      <div class="feature-card"><div class="fc-icon">🛕</div><h5>Traditional Designs</h5><p>Temple jewellery, bridal sets, daily wear — all available.</p></div>
+      <div class="feature-card"><div class="fc-icon">💳</div><h5>Easy EMI Options</h5><p>Buy now, pay in instalments. Zero cost EMI available.</p></div>
     </div>
   </div>
 </section>
 
-<!-- TRUST -->
-<section id="trust">
-  <div class="trust-inner">
-    <div class="section-header fade-up">
-      <div class="section-tag-line" style="justify-content:center; display:flex; color:var(--gold)">Why Choose Us</div>
-      <h2 class="section-title-main section-title-dark" style="font-family:var(--font-display)">Serving Hiramandalam with Trust</h2>
-      <div class="divider-gold"></div>
-      <p class="section-subtitle" style="color:#666; font-style:italic;">Since 1998 — Your family's trusted gold jewellery partner</p>
+<!-- OFFERS BANNER -->
+<section class="section-offers">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-tag" style="color:var(--gold)">Festival Season</div>
+      <h2 class="sec-title" style="color:#fff">Special <span class="gold-shimmer">Offers</span></h2>
+      <div class="sec-line"></div>
     </div>
-    <div class="trust-stats fade-up">
-      <div class="trust-stat">
-        <div class="trust-stat-num"><span class="counter" data-target="25">0</span><span class="trust-stat-unit">+</span></div>
-        <div class="trust-stat-label">Years of Service</div>
-      </div>
-      <div class="trust-stat">
-        <div class="trust-stat-num"><span class="counter" data-target="5000">0</span><span class="trust-stat-unit">+</span></div>
-        <div class="trust-stat-label">Happy Customers</div>
-      </div>
-      <div class="trust-stat">
-        <div class="trust-stat-num"><span class="counter" data-target="100">0</span><span class="trust-stat-unit">%</span></div>
-        <div class="trust-stat-label">Pure Gold Assured</div>
-      </div>
-      <div class="trust-stat">
-        <div class="trust-stat-num"><span class="counter" data-target="1200">0</span><span class="trust-stat-unit">+</span></div>
-        <div class="trust-stat-label">Designs Available</div>
-      </div>
-    </div>
-    <div class="trust-features fade-up">
-      <div class="trust-feature"><div class="trust-icon">🏅</div><div><h5>BIS Hallmark Certified</h5><p>Every piece certified for purity. No compromise on quality.</p></div></div>
-      <div class="trust-feature"><div class="trust-icon">💰</div><div><h5>Transparent Live Pricing</h5><p>Prices calculated live from market rate. No hidden charges.</p></div></div>
-      <div class="trust-feature"><div class="trust-icon">🔄</div><div><h5>Easy Exchange Policy</h5><p>Exchange your old gold jewellery for new designs at fair rates.</p></div></div>
-      <div class="trust-feature"><div class="trust-icon">📱</div><div><h5>WhatsApp Orders</h5><p>Order from home. We deliver to your doorstep in Srikakulam.</p></div></div>
-      <div class="trust-feature"><div class="trust-icon">🛕</div><div><h5>Traditional Designs</h5><p>Temple jewellery, bridal sets, daily wear — all available.</p></div></div>
-      <div class="trust-feature"><div class="trust-icon">💳</div><div><h5>Easy EMI Options</h5><p>Buy now, pay in instalments. Zero cost EMI available.</p></div></div>
+    <div class="offers-grid">
+      <div class="offer-card"><span class="offer-emoji">🪔</span><h4>Akshaya Tritiya</h4><p>Up to 50% off making charges on all jewellery. Most auspicious day to buy gold.</p><span class="offer-tag">Till Apr 30</span></div>
+      <div class="offer-card"><span class="offer-emoji">💒</span><h4>Bridal Season Special</h4><p>Complete bridal jewellery sets at special package prices. Book now!</p><span class="offer-tag">Call Us</span></div>
+      <div class="offer-card"><span class="offer-emoji">🎁</span><h4>Gold Saving Scheme</h4><p>Pay 11 months, get 1 month free from us. Join the scheme today!</p><span class="offer-tag">Free Enroll</span></div>
+      <div class="offer-card"><span class="offer-emoji">🔄</span><h4>Old Gold Exchange</h4><p>Get up to ₹500 extra per gram on exchange above 10 grams.</p><span class="offer-tag">Walk In</span></div>
     </div>
   </div>
 </section>
 
 <!-- REVIEWS -->
-<section id="reviews">
-  <div class="section-header fade-up" style="max-width:1200px; margin:0 auto 3rem;">
-    <div class="section-tag-line">Customer Stories</div>
-    <h2 class="section-title-main">What Our <span style="color:var(--gold-dark)">Customers Say</span></h2>
-    <div class="divider-gold"></div>
-  </div>
-  <div class="reviews-grid">
-    <div class="review-card fade-up">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Bought my daughter's wedding set here. The quality is excellent and the price was exactly as shown online. No hidden charges — that's rare!"</p>
-      <div class="review-author"><div class="review-avatar">L</div><div><div class="review-name">Lakshmi Devi</div><div class="review-location">Hiramandalam</div></div></div>
+<section class="section-reviews">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-tag">Customer Stories</div>
+      <h2 class="sec-title">What Our <span style="color:var(--gold-dark)">Customers Say</span></h2>
+      <div class="sec-line"></div>
     </div>
-    <div class="review-card fade-up">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"The gold calculator on their website is amazing. I checked the price before visiting and it matched exactly. Very transparent shop."</p>
-      <div class="review-author"><div class="review-avatar">R</div><div><div class="review-name">Ramesh Babu</div><div class="review-location">Narasannapeta</div></div></div>
-    </div>
-    <div class="review-card fade-up">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"WhatsApp ordering is super convenient. Ordered a chain, they delivered to my village the next day. Genuine hallmarked gold!"</p>
-      <div class="review-author"><div class="review-avatar">S</div><div><div class="review-name">Sita Ram</div><div class="review-location">Srikakulam</div></div></div>
-    </div>
-    <div class="review-card fade-up">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Best gold shop in the entire Srikakulam district. The temple jewellery designs are beautiful and unique. Family has been buying here for 15 years!"</p>
-      <div class="review-author"><div class="review-avatar">P</div><div><div class="review-name">Padmavathi</div><div class="review-location">Palakonda</div></div></div>
-    </div>
-    <div class="review-card fade-up">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Exchanged old gold here — got the best rate in the area. Staff is very helpful and honest. Highly recommend to everyone in Srikakulam!"</p>
-      <div class="review-author"><div class="review-avatar">V</div><div><div class="review-name">Venkata Rao</div><div class="review-location">Rajam</div></div></div>
-    </div>
-    <div class="review-card fade-up">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Shopping during Akshaya Tritiya was amazing — 50% off making charges! Beautiful rangam necklace at an unbeatable price."</p>
-      <div class="review-author"><div class="review-avatar">A</div><div><div class="review-name">Annapurna</div><div class="review-location">Amadalavalasa</div></div></div>
+    <div class="reviews-grid" id="reviewsGrid">
+      <div class="review-card"><div class="rv-stars">★★★★★</div><p class="rv-text">"Bought my daughter's wedding set here. Excellent quality, price was exactly as shown. No hidden charges — that's rare!"</p><div class="rv-author"><div class="rv-av">L</div><div><div class="rv-name">Lakshmi Devi</div><div class="rv-loc">Hiramandalam</div></div></div></div>
+      <div class="review-card"><div class="rv-stars">★★★★★</div><p class="rv-text">"The gold calculator is amazing. I checked the price before visiting and it matched exactly. Very transparent shop."</p><div class="rv-author"><div class="rv-av">R</div><div><div class="rv-name">Ramesh Babu</div><div class="rv-loc">Narasannapeta</div></div></div></div>
+      <div class="review-card"><div class="rv-stars">★★★★★</div><p class="rv-text">"WhatsApp ordering is super convenient. Ordered a chain, delivered to my village next day. Genuine hallmarked gold!"</p><div class="rv-author"><div class="rv-av">S</div><div><div class="rv-name">Sita Ram</div><div class="rv-loc">Srikakulam</div></div></div></div>
+      <div class="review-card"><div class="rv-stars">★★★★★</div><p class="rv-text">"Best gold shop in Srikakulam district. Temple jewellery designs are beautiful and unique. Family has bought here for 15 years!"</p><div class="rv-author"><div class="rv-av">P</div><div><div class="rv-name">Padmavathi</div><div class="rv-loc">Palakonda</div></div></div></div>
+      <div class="review-card"><div class="rv-stars">★★★★★</div><p class="rv-text">"Exchanged old gold here and got the best rate in the area. Staff is very helpful and honest. Highly recommend!"</p><div class="rv-author"><div class="rv-av">V</div><div><div class="rv-name">Venkata Rao</div><div class="rv-loc">Rajam</div></div></div></div>
+      <div class="review-card"><div class="rv-stars">★★★★★</div><p class="rv-text">"Shopping during Akshaya Tritiya was amazing — 50% off making charges! Beautiful necklace at unbeatable price."</p><div class="rv-author"><div class="rv-av">A</div><div><div class="rv-name">Annapurna</div><div class="rv-loc">Amadalavalasa</div></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- OFFERS -->
-<section id="offers">
-  <div class="offers-inner">
-    <div class="section-header fade-up">
-      <div class="section-tag-line" style="justify-content:center; display:flex; color:var(--gold)">Festival Season</div>
-      <h2 class="section-title-main section-title-dark" style="font-family:var(--font-display)">Special <span style="color:var(--gold)">Offers</span></h2>
-      <div class="divider-gold"></div>
-    </div>
-    <div class="offers-grid">
-      <div class="offer-card fade-up">
-        <span class="offer-emoji">🪔</span>
-        <div class="offer-title">Akshaya Tritiya</div>
-        <p class="offer-desc">Buy gold on the most auspicious day. Up to 50% off making charges on all jewellery.</p>
-        <span class="offer-tag">Till Apr 30 · Limited Stock</span>
-      </div>
-      <div class="offer-card fade-up">
-        <span class="offer-emoji">💒</span>
-        <div class="offer-title">Bridal Season Special</div>
-        <p class="offer-desc">Complete bridal jewellery sets at special package prices. Includes necklace, earrings, bangles, and more.</p>
-        <span class="offer-tag">Book Now · Call Us</span>
-      </div>
-      <div class="offer-card fade-up">
-        <span class="offer-emoji">🎁</span>
-        <div class="offer-title">Gold Saving Scheme</div>
-        <p class="offer-desc">Pay monthly, get jewellery at the end. 11 months payment, 12th month bonus from us.</p>
-        <span class="offer-tag">Join Today · Free Enroll</span>
-      </div>
-      <div class="offer-card fade-up">
-        <span class="offer-emoji">🔄</span>
-        <div class="offer-title">Old Gold Exchange</div>
-        <p class="offer-desc">Exchange your old gold at market rate. Get up to ₹500 extra per gram on exchange above 10 grams.</p>
-        <span class="offer-tag">Walk In Anytime</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER / CONTACT -->
-<footer id="contact">
-  <div class="footer-inner">
+<!-- FOOTER -->
+<footer id="siteFooter">
+  <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo-wrap" style="margin-bottom:1rem">
-          <div class="logo-icon" style="width:44px;height:44px;font-size:1.2rem">🛕</div>
-          <div class="logo-text">
-            <span class="logo-main">SRI TIRUMALA JEWELLERS</span>
-            <span class="logo-sub">Pure Gold · Trusted Since 1998</span>
-          </div>
+        <div class="logo" style="text-decoration:none;display:flex;align-items:center;gap:0.7rem;margin-bottom:1rem">
+          <div class="logo-icon" style="width:44px;height:44px;font-size:1.1rem">🛕</div>
+          <div><div class="logo-name" style="font-size:1rem">SRI TIRUMALA JEWELLERS</div><div class="logo-place">Pure Gold · Trusted Since 1998</div></div>
         </div>
-        <p class="footer-tagline">Your family's trusted gold jewellery partner in Hiramandalam. BIS hallmarked gold, transparent pricing, and designs for every occasion.</p>
-        <div class="footer-social">
-          <a href="https://wa.me/919876543210" class="social-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <p class="footer-desc">Hiramandalam's most trusted gold jewellery shop. BIS hallmarked, transparent pricing, 1200+ designs. Serving Srikakulam district since 1998.</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/919014457855" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
       <div>
         <div class="footer-heading">Quick Links</div>
         <ul class="footer-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#products">Collections</a></li>
-          <li><a href="#gold-rates">Gold Rate Today</a></li>
-          <li><a href="#calculator">Price Calculator</a></li>
-          <li><a href="#offers">Festival Offers</a></li>
-          <li><a href="#trust">About Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/shop.html">Collections</a></li>
+          <li><a href="pages/rates.html">Gold Rate Today</a></li>
+          <li><a href="pages/calculator.html">Price Calculator</a></li>
+          <li><a href="pages/offers.html">Festival Offers</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-heading">Categories</div>
         <ul class="footer-links">
-          <li><a href="#products">💍 Gold Rings</a></li>
-          <li><a href="#products">📿 Chains & Mangalsutra</a></li>
-          <li><a href="#products">🔮 Bangles & Kadas</a></li>
-          <li><a href="#products">✨ Earrings & Studs</a></li>
-          <li><a href="#products">🌟 Pendants</a></li>
-          <li><a href="#products">👑 Bridal Sets</a></li>
+          <li><a href="pages/shop.html?cat=rings">💍 Gold Rings</a></li>
+          <li><a href="pages/shop.html?cat=chains">📿 Chains & Mangalsutra</a></li>
+          <li><a href="pages/shop.html?cat=bangles">🔮 Bangles & Kadas</a></li>
+          <li><a href="pages/shop.html?cat=earrings">✨ Earrings & Studs</a></li>
+          <li><a href="pages/shop.html?cat=pendants">🌟 Pendants</a></li>
+          <li><a href="pages/shop.html?cat=bridal">👑 Bridal Sets</a></li>
         </ul>
       </div>
-      <div class="footer-contact">
+      <div>
         <div class="footer-heading">Visit Us</div>
-        <p>
-          <i class="fas fa-map-marker-alt"></i> Sri Tirumala Jewellers<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;Main Road, Hiramandalam<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;Srikakulam District<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;Andhra Pradesh – 532 185
-        </p>
-        <p style="margin-top:0.8rem"><i class="fas fa-phone"></i> +91 94400 00000</p>
-        <p><i class="fab fa-whatsapp"></i> +91 94400 00000 (WhatsApp)</p>
-        <p><i class="fas fa-clock"></i> Mon–Sat: 9 AM – 8 PM</p>
-        <p><i class="fas fa-clock"></i> Sunday: 10 AM – 6 PM</p>
-        <div class="footer-map" onclick="openMap()">
-          <div>
-            <i class="fas fa-map-marked-alt" style="font-size:1.5rem;display:block;margin-bottom:0.4rem"></i>
-            📍 Hiramandalam, Srikakulam<br>
-            <span style="font-size:0.68rem;color:#444">Click to open Google Maps</span>
-          </div>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Sri Tirumala Jewellers<br>&nbsp;&nbsp;&nbsp;&nbsp;Main Road, Hiramandalam<br>&nbsp;&nbsp;&nbsp;&nbsp;Srikakulam District, AP – 532 185</p>
+          <p><i class="fas fa-phone"></i> +91 90144 57855</p>
+          <p><i class="fab fa-whatsapp"></i> +91 90144 57855 (WhatsApp)</p>
+          <p><i class="fas fa-user"></i> Tirumala Rao Gudla (Owner)</p>
+          <p><i class="fas fa-clock"></i> Mon–Sat: 9 AM – 8 PM</p>
+          <p><i class="fas fa-clock"></i> Sunday: 10 AM – 6 PM</p>
         </div>
+        <a href="https://maps.google.com/?q=Hiramandalam,Srikakulam" target="_blank" class="map-link"><i class="fas fa-map-marked-alt"></i> Open Google Maps</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Sri Tirumala Jewellers · Hiramandalam, Srikakulam, Andhra Pradesh</p>
-      <p>Best Gold Shop in Hiramandalam · Gold Jewellery in Srikakulam · BIS Hallmark Certified</p>
-      <p style="cursor:pointer; opacity:0.3" onclick="openAdminLogin()">⚙</p>
+      <p>© 2025 Sri Tirumala Jewellers · Hiramandalam, Srikakulam, Andhra Pradesh. All rights reserved.</p>
+      <p>Best Gold Shop Hiramandalam · BIS Hallmark Certified · Transparent Pricing</p>
+      <span style="opacity:0.2;cursor:pointer;font-size:0.8rem" onclick="window.location='admin/login.html'">⚙</span>
     </div>
   </div>
 </footer>
 
 <!-- WHATSAPP FLOAT -->
-<div id="wa-float">
+<div class="wa-float">
   <div class="wa-label">Order on WhatsApp</div>
-  <button class="wa-btn" onclick="openWhatsApp()" title="Order on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </button>
+  <a href="https://wa.me/919014457855?text=Hello!%20I'm%20interested%20in%20gold%20jewellery%20from%20Sri%20Tirumala%20Jewellers." target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i></a>
 </div>
 
-<!-- TOAST -->
-<div id="toast"></div>
+<!-- CART DRAWER -->
+<div class="drawer-overlay" id="cartOverlay" onclick="STJ.closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="drawer-header">
+    <h3>🛍 Your Cart</h3>
+    <button onclick="STJ.closeCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="drawer-items" id="cartItems"><div class="empty-cart"><div style="font-size:3rem">🛍</div><p>Your cart is empty</p><a href="pages/shop.html" class="btn-primary" style="margin-top:1rem">Browse Collections</a></div></div>
+  <div class="drawer-footer">
+    <div class="cart-total-row"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+    <div class="cart-total-row" style="font-size:0.78rem;color:#888"><span>GST (3%)</span><span id="cartGst">₹0</span></div>
+    <div class="cart-total-row total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+    <a href="pages/checkout.html" class="btn-primary" style="width:100%;justify-content:center;margin-top:1rem">Proceed to Checkout</a>
+    <button class="btn-whatsapp" style="width:100%;margin-top:0.5rem;justify-content:center" onclick="STJ.whatsappCart()"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
+  </div>
+</aside>
 
 <!-- LOGIN MODAL -->
 <div class="modal-overlay" id="loginModal">
   <div class="modal-box">
-    <button class="modal-close" onclick="closeModal('loginModal')"><i class="fas fa-times"></i></button>
-    <div class="modal-title">🛕 Welcome Back</div>
-    <p class="modal-sub">Sign in to track orders, save wishlist, and more</p>
+    <button class="modal-close" onclick="STJ.closeModal('loginModal')"><i class="fas fa-times"></i></button>
+    <div class="modal-logo">🛕 Sri Tirumala Jewellers</div>
     <div class="modal-tabs">
-      <button class="modal-tab active" onclick="switchModalTab('login')">Login</button>
-      <button class="modal-tab" onclick="switchModalTab('signup')">Sign Up</button>
+      <button class="mtab active" onclick="STJ.switchTab('login')">Login</button>
+      <button class="mtab" onclick="STJ.switchTab('signup')">Sign Up</button>
     </div>
-    <div class="modal-panel active" id="mpLogin">
-      <div class="input-group-gold">
-        <label class="form-label-gold" style="color:#888">Phone Number</label>
-        <input type="tel" class="input-gold" id="loginPhone" placeholder="+91 XXXXX XXXXX"/>
-      </div>
-      <div class="input-group-gold">
-        <label class="form-label-gold" style="color:#888">Password</label>
-        <input type="password" class="input-gold" id="loginPass" placeholder="Your password"/>
-      </div>
-      <button class="btn-gold" style="width:100%; margin-top:0.5rem; justify-content:center" onclick="doLogin()">
-        <i class="fas fa-sign-in-alt"></i> Login
-      </button>
-      <p style="text-align:center; margin-top:1rem; font-size:0.78rem; color:#555; font-family:var(--font-sans)">
-        Demo: any number + any password
-      </p>
+    <div id="tabLogin" class="tab-panel active">
+      <div class="form-group"><label>Phone Number</label><input type="tel" id="loginPhone" placeholder="+91 90144 57855" class="form-input"/></div>
+      <div class="form-group"><label>Password</label><input type="password" id="loginPass" placeholder="Your password" class="form-input"/></div>
+      <button class="btn-primary" style="width:100%;justify-content:center" onclick="STJ.doLogin()"><i class="fas fa-sign-in-alt"></i> Login</button>
+      <p style="text-align:center;margin-top:0.8rem;font-size:0.75rem;color:#666">Demo: any phone + any password</p>
     </div>
-    <div class="modal-panel" id="mpSignup">
-      <div class="input-group-gold">
-        <label class="form-label-gold" style="color:#888">Full Name</label>
-        <input type="text" class="input-gold" placeholder="Your full name"/>
-      </div>
-      <div class="input-group-gold">
-        <label class="form-label-gold" style="color:#888">Phone Number</label>
-        <input type="tel" class="input-gold" placeholder="+91 XXXXX XXXXX"/>
-      </div>
-      <div class="input-group-gold">
-        <label class="form-label-gold" style="color:#888">Password</label>
-        <input type="password" class="input-gold" placeholder="Create password"/>
-      </div>
-      <button class="btn-gold" style="width:100%; margin-top:0.5rem; justify-content:center" onclick="doSignup()">
-        <i class="fas fa-user-plus"></i> Create Account
-      </button>
+    <div id="tabSignup" class="tab-panel">
+      <div class="form-group"><label>Full Name</label><input type="text" id="signupName" placeholder="Your full name" class="form-input"/></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" id="signupPhone" placeholder="+91 XXXXX XXXXX" class="form-input"/></div>
+      <div class="form-group"><label>Password</label><input type="password" id="signupPass" placeholder="Create password" class="form-input"/></div>
+      <button class="btn-primary" style="width:100%;justify-content:center" onclick="STJ.doSignup()"><i class="fas fa-user-plus"></i> Create Account</button>
     </div>
   </div>
 </div>
 
-<!-- CART OVERLAY -->
-<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<!-- TOAST -->
+<div id="toast" class="toast"></div>
 
-<!-- CART SIDEBAR -->
-<div id="cart-sidebar">
-  <div class="cart-header">
-    <div class="cart-title">🛍 Your Cart</div>
-    <button class="modal-close" onclick="closeCart()"><i class="fas fa-times"></i></button>
-  </div>
-  <div class="cart-items" id="cartItems">
-    <div style="text-align:center; padding:3rem 1rem; color:#444; font-family:var(--font-sans); font-size:0.88rem;">
-      <div style="font-size:3rem; margin-bottom:1rem">🛍</div>
-      Your cart is empty.<br>Browse our collections!
-    </div>
-  </div>
-  <div class="cart-footer">
-    <div class="cart-total">
-      <span class="cart-total-label">Total Amount</span>
-      <span class="cart-total-val" id="cartTotal">₹0</span>
-    </div>
-    <button class="btn-checkout" onclick="checkout()"><i class="fas fa-check-circle"></i> Proceed to Order</button>
-    <button class="btn-whatsapp-cart" onclick="whatsappCart()"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
-  </div>
-</div>
-
-<!-- ADMIN LOGIN MODAL -->
-<div class="modal-overlay" id="adminLoginModal">
-  <div class="modal-box" style="max-width:380px">
-    <button class="modal-close" onclick="closeModal('adminLoginModal')"><i class="fas fa-times"></i></button>
-    <div class="modal-title" style="color:var(--gold)">⚙ Admin Access</div>
-    <p class="modal-sub">Sri Tirumala Jewellers — Secure Admin Panel</p>
-    <div class="input-group-gold">
-      <label class="form-label-gold" style="color:#888">Admin Username</label>
-      <input type="text" class="input-gold" id="adminUser" placeholder="admin"/>
-    </div>
-    <div class="input-group-gold">
-      <label class="form-label-gold" style="color:#888">Password</label>
-      <input type="password" class="input-gold" id="adminPass" placeholder="••••••••"/>
-    </div>
-    <button class="btn-gold" style="width:100%; justify-content:center" onclick="doAdminLogin()">
-      <i class="fas fa-lock-open"></i> Enter Admin Panel
-    </button>
-    <p style="text-align:center; margin-top:0.8rem; font-size:0.72rem; color:#444; font-family:var(--font-sans)">Demo: admin / admin123</p>
-  </div>
-</div>
-
-<!-- ADMIN PANEL -->
-<div id="admin-panel">
-  <div class="admin-header">
-    <div>
-      <div class="admin-title">⚙ Admin Dashboard — Sri Tirumala Jewellers</div>
-      <div style="font-size:0.75rem; color:#555; font-family:var(--font-sans); margin-top:0.2rem">Hiramandalam, Srikakulam</div>
-    </div>
-    <button class="btn-gold" onclick="closeAdmin()" style="font-size:0.78rem; padding:0.6rem 1.4rem"><i class="fas fa-arrow-left"></i> Back to Site</button>
-  </div>
-  <div class="admin-grid">
-    <div class="admin-stat"><div class="admin-stat-num" id="adProdCount">8</div><div class="admin-stat-label">Products</div></div>
-    <div class="admin-stat"><div class="admin-stat-num" id="adOrderCount">3</div><div class="admin-stat-label">Orders</div></div>
-    <div class="admin-stat"><div class="admin-stat-num">₹7,420</div><div class="admin-stat-label">24K Rate (Live)</div></div>
-    <div class="admin-stat"><div class="admin-stat-num">5</div><div class="admin-stat-label">Wishlist Saves</div></div>
-  </div>
-
-  <!-- Add Product -->
-  <div class="admin-section">
-    <div class="admin-section-title">➕ Add New Product</div>
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; margin-bottom:1rem">
-      <div><label class="form-label-gold" style="color:#666">Product Name</label><input type="text" class="input-gold" id="ap-name" placeholder="e.g. Temple Ring"/></div>
-      <div><label class="form-label-gold" style="color:#666">Category</label>
-        <select class="input-gold" id="ap-cat">
-          <option value="rings">Rings</option><option value="chains">Chains</option><option value="bangles">Bangles</option><option value="earrings">Earrings</option><option value="pendants">Pendants</option>
-        </select>
-      </div>
-      <div><label class="form-label-gold" style="color:#666">Karat</label>
-        <select class="input-gold" id="ap-karat">
-          <option value="24">24K</option><option value="22" selected>22K</option><option value="18">18K</option>
-        </select>
-      </div>
-      <div><label class="form-label-gold" style="color:#666">Weight (grams)</label><input type="number" class="input-gold" id="ap-weight" placeholder="e.g. 5.2"/></div>
-      <div><label class="form-label-gold" style="color:#666">Making ₹/gram</label><input type="number" class="input-gold" id="ap-making" placeholder="e.g. 350"/></div>
-      <div><label class="form-label-gold" style="color:#666">Emoji Icon</label><input type="text" class="input-gold" id="ap-emoji" placeholder="💍"/></div>
-    </div>
-    <button class="btn-gold" onclick="adminAddProduct()" style="font-size:0.8rem; padding:0.6rem 1.4rem"><i class="fas fa-plus"></i> Add Product</button>
-  </div>
-
-  <!-- Products Table -->
-  <div class="admin-section">
-    <div class="admin-section-title">📦 Product Inventory</div>
-    <div style="overflow-x:auto">
-      <table class="admin-table" id="adminProdTable">
-        <thead><tr><th>Name</th><th>Category</th><th>Karat</th><th>Weight</th><th>Making</th><th>Live Price</th><th>Actions</th></tr></thead>
-        <tbody id="adminProdBody"></tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- Orders Table -->
-  <div class="admin-section">
-    <div class="admin-section-title">🧾 Recent Orders</div>
-    <table class="admin-table">
-      <thead><tr><th>Order ID</th><th>Customer</th><th>Items</th><th>Amount</th><th>Status</th><th>Actions</th></tr></thead>
-      <tbody id="adminOrderBody"></tbody>
-    </table>
-  </div>
-</div>
-
+<script src="js/gold-api.js"></script>
+<script src="js/store.js"></script>
+<script src="js/main.js"></script>
 <script>
-// ===== STATE =====
-let gold24k = 7420;
-let cartItems = [];
-let products = [
-  { id:1, name:'Temple Ring', cat:'rings', karat:22, weight:3.5, making:400, emoji:'💍' },
-  { id:2, name:'Mangalsutra Chain', cat:'chains', karat:22, weight:8.0, making:300, emoji:'📿' },
-  { id:3, name:'Bridal Bangle Set', cat:'bangles', karat:22, weight:25.0, making:350, emoji:'🔮' },
-  { id:4, name:'Lakshmi Earrings', cat:'earrings', karat:22, weight:2.5, making:500, emoji:'✨' },
-  { id:5, name:'Gold Chain 24K', cat:'chains', karat:24, weight:5.0, making:250, emoji:'🌟' },
-  { id:6, name:'Diamond-cut Ring', cat:'rings', karat:18, weight:4.2, making:600, emoji:'💎' },
-  { id:7, name:'Peacock Pendant', cat:'pendants', karat:22, weight:3.0, making:450, emoji:'🦚' },
-  { id:8, name:'Kada Bangle', cat:'bangles', karat:22, weight:15.0, making:320, emoji:'🔯' },
-];
-let wishlist = [];
-let orders = [
-  { id:'STJ001', customer:'Lakshmi Devi', items:'Temple Ring (1)', amount:32480, status:'Delivered' },
-  { id:'STJ002', customer:'Ramesh Babu', items:'Gold Chain 24K (1)', amount:37100, status:'Processing' },
-  { id:'STJ003', customer:'Annapurna', items:'Lakshmi Earrings (2)', amount:34940, status:'Pending' },
-];
-let isLoggedIn = false;
-let currentUser = null;
-let currentLang = 'en';
-let currentCat = 'all';
-
-// ===== GOLD PRICE =====
-function getKaratPrice(k){ return (k/24)*gold24k; }
-function formatPrice(n){ return '₹'+Math.round(n).toLocaleString('en-IN'); }
-
-function updateAllRates(){
-  const now = new Date();
-  document.getElementById('lastUpdated').textContent = 'Last updated: '+now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'})+' IST · '+now.toLocaleDateString('en-IN');
-  document.getElementById('r24k').textContent = formatPrice(gold24k);
-  document.getElementById('r22k').textContent = formatPrice(getKaratPrice(22));
-  document.getElementById('r20k').textContent = formatPrice(getKaratPrice(20));
-  document.getElementById('r18k').textContent = formatPrice(getKaratPrice(18));
-  document.getElementById('r14k').textContent = formatPrice(getKaratPrice(14));
-  document.getElementById('t24k').textContent = formatPrice(gold24k)+'/g';
-  document.getElementById('t22k').textContent = formatPrice(getKaratPrice(22))+'/g';
-  document.getElementById('t18k').textContent = formatPrice(getKaratPrice(18))+'/g';
-  renderProducts(currentCat);
-  calcKarat(); calcJewellery(); calcBuying(); calcReverse(); calcQL();
-  updateAdminTable();
-}
-
-// Simulate live price updates
-function simulatePriceUpdate(){
-  const change = (Math.random()-0.48)*30;
-  gold24k = Math.max(7000, gold24k + change);
-  updateAllRates();
-}
-setInterval(simulatePriceUpdate, 5*60*1000);
-updateAllRates();
-
-// ===== CALCULATORS =====
-function calcKarat(){
-  const base = parseFloat(document.getElementById('base24k').value)||7420;
-  const g = parseFloat(document.getElementById('gramWeight').value)||1;
-  [['22','res22k'],['20','res20k'],['18','res18k'],['16','res16k'],['14','res14k'],['10','res10k']].forEach(([k,id])=>{
-    document.getElementById(id).textContent = formatPrice((parseInt(k)/24)*base*g);
-  });
-}
-function calcJewellery(){
-  const k=parseInt(document.getElementById('jewKarat').value);
-  const w=parseFloat(document.getElementById('jewWeight').value)||0;
-  const m=parseFloat(document.getElementById('makingCh').value)||0;
-  const gPrice=(k/24)*gold24k;
-  const goldVal=gPrice*w, makingVal=m*w;
-  document.getElementById('jewTotal').textContent=formatPrice(goldVal+makingVal);
-  document.getElementById('jewBreak').textContent='Gold: '+formatPrice(goldVal)+' + Making: '+formatPrice(makingVal);
-}
-function calcBuying(){
-  const budget=parseFloat(document.getElementById('budget').value)||0;
-  const k=parseInt(document.getElementById('buyKarat').value);
-  const price=(k/24)*gold24k;
-  const grams=budget/price;
-  document.getElementById('buyResult').textContent=grams.toFixed(2)+' grams';
-  document.getElementById('buyNote').textContent='of '+k+'K gold at '+formatPrice(price)+'/g';
-}
-function calcReverse(){
-  const g=parseFloat(document.getElementById('revGrams').value)||0;
-  const k=parseInt(document.getElementById('revKarat').value);
-  document.getElementById('revResult').textContent=formatPrice((k/24)*gold24k*g);
-}
-function calcQL(){
-  const k=parseInt(document.getElementById('qlKarat').value);
-  const w=parseFloat(document.getElementById('qlWeight').value)||0;
-  document.getElementById('qlResult').textContent=formatPrice((k/24)*gold24k*w);
-}
-function syncQL(){
-  const v=document.getElementById('qlSlider').value;
-  document.getElementById('qlWeight').value=v;
-  calcQL();
-}
-function switchCalcTab(t){
-  document.querySelectorAll('.calc-tab').forEach((b,i)=>{ b.classList.toggle('active',['karat','buying','weight'][i]===t); });
-  document.querySelectorAll('.calc-panel').forEach(p=>p.classList.remove('active'));
-  document.getElementById('tab-'+t).classList.add('active');
-}
-
-// ===== PRODUCTS =====
-function calcProductPrice(p){ return (p.karat/24)*gold24k*p.weight + p.making*p.weight; }
-function renderProducts(cat){
-  currentCat=cat;
-  const grid=document.getElementById('productsGrid');
-  const filtered=cat==='all'?products:products.filter(p=>p.cat===cat);
-  grid.innerHTML=filtered.map(p=>{
-    const price=calcProductPrice(p);
-    const goldOnly=(p.karat/24)*gold24k*p.weight;
-    const isWish=wishlist.includes(p.id);
-    return `<div class="product-card fade-up" data-cat="${p.cat}">
-      <div class="product-img">
-        ${p.emoji}
-        <span class="product-badge-purity">${p.karat}K GOLD</span>
-        <button class="wishlist-btn ${isWish?'active':''}" onclick="toggleWish(${p.id},this)" title="Wishlist">
-          <i class="${isWish?'fas':'far'} fa-heart"></i>
-        </button>
-      </div>
-      <div class="product-info">
-        <div class="product-name">${p.name}</div>
-        <div class="product-weight">${p.weight}g · ${p.karat}K · Making: ${formatPrice(p.making)}/g</div>
-        <div class="product-price-row">
-          <div class="product-price">${formatPrice(price)}</div>
-          <div class="product-making">Gold: ${formatPrice(goldOnly)}<br>Making: ${formatPrice(p.making*p.weight)}</div>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" onclick="addToCart(${p.id})"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
-          <button class="btn-whatsapp-p" onclick="whatsappProduct(${p.id})" title="Order on WhatsApp"><i class="fab fa-whatsapp"></i></button>
-        </div>
-      </div>
-    </div>`;
-  }).join('');
-  observeFadeUps();
-}
-function filterCat(cat){
-  document.querySelectorAll('.cat-tab').forEach(b=>b.classList.remove('active'));
-  event.target.classList.add('active');
-  renderProducts(cat);
-}
-function toggleWish(id, btn){
-  if(wishlist.includes(id)) wishlist=wishlist.filter(x=>x!==id);
-  else wishlist.push(id);
-  btn.classList.toggle('active');
-  btn.innerHTML=`<i class="${wishlist.includes(id)?'fas':'far'} fa-heart"></i>`;
-  showToast(wishlist.includes(id)?'Added to wishlist ❤️':'Removed from wishlist');
-}
-function whatsappProduct(id){
-  const p=products.find(x=>x.id===id);
-  const price=calcProductPrice(p);
-  const msg=`🛕 *SRI TIRUMALA JEWELLERS*\nHello! I'm interested in:\n\n💍 *${p.name}*\n⚖️ Weight: ${p.weight}g\n✨ Karat: ${p.karat}K\n💰 Price: ${formatPrice(price)}\n\nPlease confirm availability. Thank you!`;
-  window.open('https://wa.me/919876543210?text='+encodeURIComponent(msg),'_blank');
-}
-
-// ===== CART =====
-function addToCart(id){
-  const p=products.find(x=>x.id===id);
-  const existing=cartItems.find(c=>c.id===id);
-  if(existing) existing.qty++;
-  else cartItems.push({...p, qty:1});
-  updateCartUI();
-  showToast(p.name+' added to cart! 🛍');
-  openCart();
-}
-function removeFromCart(id){
-  cartItems=cartItems.filter(c=>c.id!==id);
-  updateCartUI();
-}
-function updateCartUI(){
-  const count=cartItems.reduce((a,c)=>a+c.qty,0);
-  document.getElementById('cartCount').textContent=count;
-  const total=cartItems.reduce((a,c)=>a+calcProductPrice(c)*c.qty,0);
-  document.getElementById('cartTotal').textContent=formatPrice(total);
-  document.getElementById('adOrderCount').textContent=orders.length+cartItems.length;
-  if(cartItems.length===0){
-    document.getElementById('cartItems').innerHTML='<div style="text-align:center;padding:3rem 1rem;color:#444;font-family:var(--font-sans);font-size:0.88rem"><div style="font-size:3rem;margin-bottom:1rem">🛍</div>Your cart is empty.<br>Browse our collections!</div>';
-    return;
-  }
-  document.getElementById('cartItems').innerHTML=cartItems.map(c=>`
-    <div class="cart-item">
-      <div class="cart-item-img">${c.emoji}</div>
-      <div class="cart-item-info">
-        <div class="cart-item-name">${c.name}</div>
-        <div class="cart-item-weight">${c.weight}g · ${c.karat}K · Qty: ${c.qty}</div>
-        <div class="cart-item-price">${formatPrice(calcProductPrice(c)*c.qty)}</div>
-      </div>
-      <button class="cart-remove" onclick="removeFromCart(${c.id})"><i class="fas fa-trash"></i></button>
-    </div>`).join('');
-}
-function openCart(){ document.getElementById('cart-sidebar').classList.add('open'); document.getElementById('cartOverlay').classList.add('open'); }
-function closeCart(){ document.getElementById('cart-sidebar').classList.remove('open'); document.getElementById('cartOverlay').classList.remove('open'); }
-function checkout(){ showToast('Order placed! We will contact you shortly. 📞'); cartItems=[]; updateCartUI(); closeCart(); }
-function whatsappCart(){
-  if(!cartItems.length){ showToast('Your cart is empty!'); return; }
-  const items=cartItems.map(c=>`• ${c.name} (${c.weight}g, ${c.karat}K) x${c.qty} = ${formatPrice(calcProductPrice(c)*c.qty)}`).join('\n');
-  const total=cartItems.reduce((a,c)=>a+calcProductPrice(c)*c.qty,0);
-  const msg=`🛕 *SRI TIRUMALA JEWELLERS – ORDER*\n\n${items}\n\n💰 *Total: ${formatPrice(total)}*\n\nPlease confirm my order. Thank you!`;
-  window.open('https://wa.me/919876543210?text='+encodeURIComponent(msg),'_blank');
-}
-function openWishlist(){ showToast(`Wishlist: ${wishlist.length} item(s) saved ❤️`); }
-function openWhatsApp(){
-  const msg='🛕 *SRI TIRUMALA JEWELLERS*\nHello! I would like to enquire about gold jewellery. Please help me.';
-  window.open('https://wa.me/919876543210?text='+encodeURIComponent(msg),'_blank');
-}
-function openMap(){ window.open('https://maps.google.com/?q=Hiramandalam,Srikakulam,Andhra+Pradesh','_blank'); }
-
-// ===== LOGIN =====
-function openLogin(){ if(isLoggedIn){ doLogout(); return; } openModal('loginModal'); }
-function closeModal(id){ document.getElementById(id).classList.remove('open'); }
-function openModal(id){ document.getElementById(id).classList.add('open'); }
-function switchModalTab(t){
-  document.querySelectorAll('.modal-tab').forEach((b,i)=>b.classList.toggle('active',['login','signup'][i]===t));
-  document.getElementById('mpLogin').classList.toggle('active',t==='login');
-  document.getElementById('mpSignup').classList.toggle('active',t==='signup');
-}
-function doLogin(){
-  const phone=document.getElementById('loginPhone').value;
-  if(!phone){ showToast('Please enter phone number'); return; }
-  isLoggedIn=true; currentUser={name:'Customer', phone};
-  document.getElementById('loginBtn').textContent='Logout';
-  closeModal('loginModal');
-  showToast('Welcome back! Logged in successfully ✓');
-}
-function doSignup(){
-  isLoggedIn=true; currentUser={name:'New Customer'};
-  document.getElementById('loginBtn').textContent='Logout';
-  closeModal('loginModal');
-  showToast('Account created! Welcome to Sri Tirumala Jewellers 🛕');
-}
-function doLogout(){ isLoggedIn=false; currentUser=null; document.getElementById('loginBtn').textContent='Login'; showToast('Logged out successfully'); }
-
-// ===== ADMIN =====
-function openAdminLogin(){ openModal('adminLoginModal'); }
-function doAdminLogin(){
-  const u=document.getElementById('adminUser').value, p=document.getElementById('adminPass').value;
-  if(u==='admin'&&p==='admin123'){ closeModal('adminLoginModal'); document.getElementById('admin-panel').classList.add('open'); updateAdminTable(); }
-  else showToast('Invalid credentials');
-}
-function closeAdmin(){ document.getElementById('admin-panel').classList.remove('open'); }
-function updateAdminTable(){
-  document.getElementById('adProdCount').textContent=products.length;
-  document.getElementById('adminProdBody').innerHTML=products.map(p=>`
-    <tr>
-      <td>${p.emoji} ${p.name}</td>
-      <td>${p.cat}</td>
-      <td>${p.karat}K</td>
-      <td>${p.weight}g</td>
-      <td>₹${p.making}/g</td>
-      <td>${formatPrice(calcProductPrice(p))}</td>
-      <td>
-        <button class="admin-action-btn" onclick="editProduct(${p.id})">Edit</button>
-        <button class="admin-action-btn danger" onclick="deleteProduct(${p.id})">Delete</button>
-      </td>
-    </tr>`).join('');
-  document.getElementById('adminOrderBody').innerHTML=orders.map(o=>`
-    <tr>
-      <td style="color:var(--gold)">${o.id}</td>
-      <td>${o.customer}</td>
-      <td>${o.items}</td>
-      <td style="color:var(--gold)">${formatPrice(o.amount)}</td>
-      <td style="color:${o.status==='Delivered'?'#4caf50':o.status==='Processing'?'#ff9800':'#f44336'}">${o.status}</td>
-      <td><button class="admin-action-btn">View</button></td>
-    </tr>`).join('');
-}
-function adminAddProduct(){
-  const name=document.getElementById('ap-name').value,cat=document.getElementById('ap-cat').value,karat=parseInt(document.getElementById('ap-karat').value),weight=parseFloat(document.getElementById('ap-weight').value),making=parseFloat(document.getElementById('ap-making').value),emoji=document.getElementById('ap-emoji').value||'💍';
-  if(!name||!weight||!making){ showToast('Please fill all fields'); return; }
-  const newP={id:Date.now(),name,cat,karat,weight,making,emoji};
-  products.push(newP);
-  updateAdminTable(); renderProducts(currentCat);
-  document.getElementById('ap-name').value=''; document.getElementById('ap-weight').value=''; document.getElementById('ap-making').value=''; document.getElementById('ap-emoji').value='';
-  showToast('Product added: '+name+' ✓');
-}
-function editProduct(id){ showToast('Edit product (connect to backend for full editing)'); }
-function deleteProduct(id){ products=products.filter(p=>p.id!==id); updateAdminTable(); renderProducts(currentCat); showToast('Product deleted'); }
-
-// ===== LANGUAGE =====
-function toggleLang(){
-  currentLang = currentLang==='en'?'te':'en';
-  document.querySelectorAll('[data-en]').forEach(el=>{ el.textContent=el.dataset[currentLang]||el.dataset.en; });
-  showToast(currentLang==='te'?'తెలుగు మోడ్ ఆన్ 🙏':'Switched to English');
-}
-
-// ===== MOBILE NAV =====
-function toggleMobile(){ document.getElementById('mobileNav').classList.toggle('open'); }
-function closeMobile(){ document.getElementById('mobileNav').classList.remove('open'); }
-
-// ===== TOAST =====
-function showToast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),3000); }
-
-// ===== SCROLL ANIMATIONS =====
-function observeFadeUps(){
-  const obs=new IntersectionObserver(entries=>entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }),{threshold:0.1});
-  document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
-}
-observeFadeUps();
-
-// ===== COUNTERS =====
-const cobs=new IntersectionObserver(entries=>entries.forEach(e=>{
-  if(e.isIntersecting){
-    const el=e.target, target=parseInt(el.dataset.target);
-    let current=0; const duration=2000; const step=target/(duration/16);
-    const timer=setInterval(()=>{ current=Math.min(current+step,target); el.textContent=Math.round(current).toLocaleString('en-IN'); if(current>=target) clearInterval(timer); },16);
-    cobs.unobserve(el);
-  }
-}),{threshold:0.5});
-document.querySelectorAll('.counter').forEach(el=>cobs.observe(el));
-
-// ===== ADMIN URL =====
-if(window.location.hash==='#admin-stj-secure') openAdminLogin();
-
-// ===== INIT =====
-renderProducts('all');
-calcKarat(); calcJewellery(); calcBuying(); calcReverse(); calcQL();
-updateCartUI();
+  STJ.init();
+  STJ.renderFeatured('all');
+  STJ.quickCalc();
+  GoldAPI.start();
 </script>
 </body>
 </html>
