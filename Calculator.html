@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Free gold jewellery price calculator. Know exact price of 22K, 24K, 18K gold before you buy. Live rates from Hiramandalam."/>
+<title>Gold Calculator — Sri Tirumala Jewellers</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/main.css"/>
+<link rel="stylesheet" href="../css/components.css"/>
+</head>
+<body>
+<div id="gold-ticker"><div class="ticker-track"><span class="tick-item">🔴 LIVE RATES</span><span class="tick-item">24K: <strong id="t24">₹7,420/g</strong></span><span class="tick-item">22K: <strong id="t22">₹6,802/g</strong></span><span class="tick-item">18K: <strong id="t18">₹5,565/g</strong></span><span class="tick-item">24K: <strong>₹7,420/g</strong></span></div></div>
+<header id="siteHeader"><div class="header-wrap"><a href="../index.html" class="logo"><div class="logo-icon">🛕</div><div><div class="logo-name">SRI TIRUMALA JEWELLERS</div><div class="logo-place">Hiramandalam · Est. 1998</div></div></a><nav class="main-nav" id="mainNav"><a href="../index.html" class="nav-link">Home</a><a href="shop.html" class="nav-link">Shop</a><a href="rates.html" class="nav-link">Gold Rate</a><a href="calculator.html" class="nav-link active">Calculator</a><a href="contact.html" class="nav-link">Contact</a></nav><div class="header-actions"><button class="icon-btn" onclick="STJ.openCart()"><i class="fas fa-shopping-bag"></i><span class="badge" id="cartCount">0</span></button><button class="hamburger" onclick="STJ.toggleMenu()"><i class="fas fa-bars"></i></button></div></div></header>
+
+<div class="page-hero"><div class="page-hero-inner"><div class="breadcrumb"><a href="../index.html">Home</a><i class="fas fa-chevron-right"></i><span>Calculator</span></div><h1 class="page-title">Gold Price Calculator</h1><p class="page-sub">Know the exact price before you buy — Live rates, transparent breakdown</p></div></div>
+
+<div class="container" style="padding-top:3rem;padding-bottom:5rem">
+  <!-- LIVE RATE BANNER -->
+  <div style="background:rgba(201,150,42,0.07);border:1px solid rgba(201,150,42,0.25);border-radius:10px;padding:1rem 1.5rem;margin-bottom:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+    <div style="display:flex;align-items:center;gap:0.6rem;font-family:var(--font-sans)"><span class="live-dot"></span><span style="font-size:0.75rem;color:var(--green);font-weight:700;letter-spacing:0.08em">LIVE RATES</span><span style="font-size:0.8rem;color:#888">|</span><span style="font-size:0.83rem;color:var(--text-muted)" id="calcLastUpdated">Fetching...</span></div>
+    <div style="display:flex;gap:2rem;font-family:var(--font-display)">
+      <span style="font-size:0.85rem;color:#888">24K: <strong style="color:var(--gold-light)" id="liveBanner24">₹7,420/g</strong></span>
+      <span style="font-size:0.85rem;color:#888">22K: <strong style="color:var(--gold-light)" id="liveBanner22">₹6,802/g</strong></span>
+      <span style="font-size:0.85rem;color:#888">18K: <strong style="color:var(--gold-light)" id="liveBanner18">₹5,565/g</strong></span>
+    </div>
+  </div>
+
+  <!-- CALC TABS -->
+  <div class="calc-tabs-row" style="max-width:700px;margin:0 auto 2rem">
+    <button class="ctab active" onclick="CalcPage.switchTab('jewellery',0)">💍 Jewellery Price</button>
+    <button class="ctab" onclick="CalcPage.switchTab('budget',1)">💰 Budget Calculator</button>
+    <button class="ctab" onclick="CalcPage.switchTab('karat',2)">⚖️ Karat Converter</button>
+    <button class="ctab" onclick="CalcPage.switchTab('old',3)">🔄 Old Gold Value</button>
+  </div>
+
+  <!-- TAB: JEWELLERY PRICE -->
+  <div id="tab-jewellery" class="calc-layout">
+    <div class="calc-card">
+      <h3>💍 Jewellery Price Estimator</h3>
+      <div class="form-group"><label class="form-group" style="font-size:0.73rem;color:#888;display:block;text-transform:uppercase;letter-spacing:0.07em;font-weight:600;margin-bottom:0.35rem">Select Karat</label>
+        <select class="form-input" id="jKarat" onchange="CalcPage.calcJewellery()">
+          <option value="24">24 Karat — 99.9% Pure</option>
+          <option value="22" selected>22 Karat — 91.6% Pure (Most Popular)</option>
+          <option value="20">20 Karat — 83.3% Pure</option>
+          <option value="18">18 Karat — 75% Pure</option>
+          <option value="14">14 Karat — 58.3% Pure</option>
+        </select>
+      </div>
+      <div class="form-group"><label style="font-size:0.73rem;color:#888;display:block;text-transform:uppercase;letter-spacing:0.07em;font-weight:600;margin-bottom:0.35rem">Weight (grams)</label>
+        <input type="number" class="form-input" id="jWeight" value="10" min="0.1" step="0.1" oninput="CalcPage.calcJewellery()"/>
+        <input type="range" id="jSlider" min="0.1" max="100" step="0.1" value="10" style="width:100%;margin-top:0.5rem;accent-color:var(--gold)" oninput="document.getElementById('jWeight').value=this.value;CalcPage.calcJewellery()"/>
+        <div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#aaa;font-family:var(--font-sans)"><span>0.1g</span><span>100g</span></div>
+      </div>
+      <div class="form-group"><label style="font-size:0.73rem;color:#888;display:block;text-transform:uppercase;letter-spacing:0.07em;font-weight:600;margin-bottom:0.35rem">Making Charges (₹/gram)</label>
+        <input type="number" class="form-input" id="jMaking" value="350" min="0" oninput="CalcPage.calcJewellery()"/>
+        <div style="font-size:0.7rem;color:#aaa;font-family:var(--font-sans);margin-top:0.3rem">Typical range: ₹200–₹900/gram depending on design complexity</div>
+      </div>
+    </div>
+    <div class="calc-card">
+      <h3>📊 Price Breakdown</h3>
+      <div class="calc-result-box">
+        <div class="crb-label">Total Estimated Price (incl. GST)</div>
+        <div class="crb-value" id="jTotal">₹72,870</div>
+        <div class="crb-break" id="jBreak">Gold: ₹68,020 + Making: ₹3,500 + GST (3%): ₹2,146</div>
+      </div>
+      <div style="margin-top:1.5rem">
+        <div style="font-size:0.75rem;color:#888;font-family:var(--font-sans);font-weight:700;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.8rem">Gold Value Across All Karats (Same Weight)</div>
+        <div class="karat-grid" id="karatGrid"></div>
+      </div>
+      <div style="margin-top:1.5rem;display:flex;gap:0.8rem;flex-wrap:wrap">
+        <a href="shop.html" class="btn-primary" style="font-size:0.8rem;padding:0.7rem 1.4rem"><i class="fas fa-gem"></i> Shop Now</a>
+        <button onclick="CalcPage.whatsappEnquiry()" class="btn-whatsapp" style="font-size:0.8rem;padding:0.7rem 1.2rem"><i class="fab fa-whatsapp"></i> Send Enquiry</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: BUDGET -->
+  <div id="tab-budget" class="calc-layout" style="display:none">
+    <div class="calc-card">
+      <h3>💰 Budget Calculator</h3>
+      <div class="form-group"><label style="font-size:0.73rem;color:#888;display:block;text-transform:uppercase;font-weight:600;margin-bottom:0.35rem">Your Budget (₹)</label>
+        <input type="number" class="form-input" id="bBudget" value="50000" oninput="CalcPage.calcBudget()"/>
+      </div>
+      <div class="form-group"><label style="font-size:0.73rem;color:#888;display:block;text-transform:uppercase;font-weight:600;margin-bottom:0.35rem">Select Karat</label>
+        <select class="form-input" id="bKarat" onchange="CalcPage.calcBudget()"><option value="24">24K</option><option value="22" selected>22K</option><option value="18">18K</option></select>
+      </div>
+      <div class="form-group"><label style="font-size:0.73rem;color:#888;display:block;text-transform:uppercase;font-weight:600;margin-bottom:0.35rem">Making Charges (₹/gram)</label>
+        <input type="number" class="form-input" id="bMaking" value="350" oninput="CalcPage.calcBudget()"/>
+      </div>
+    </div>
+    <div class="calc-card">
+      <h3>📊 Result</h3>
+      <div class="calc-result-box"><div class="crb-label">You can buy approximately</div><div class="crb-value" id="bResult">6.8 grams</div><div class="crb-break" id="bBreak">of 22K gold within your ₹50,000 budget</div></div>
+      <div style="margin-top:1rem;padding:1rem;background:#f9f9f5;border-radius:8px;font-family:var(--font-sans);font-size:0.83rem;color:var(--text-muted);line-height:1.7"><strong style="color:var(--gold-dark)">Tip:</strong> Budget includes gold value + making charges + 3% GST. Higher karat = more gold value per gram but same weight = higher price.</div>
+    </div>
+  </div>
+
+  <!-- TAB: KARAT CONVERTER -->
+  <div id="tab-karat" class="calc-layout" style="display:none">
+    <div class="calc-card">
+      <h3>⚖️ Karat Converter</h3>
+      <div class="form-group"><label style="font-size:0.73rem;color:#888;display:block;text-transform:uppercase;font-weight:600;margin-bottom:0.35rem">24K Gold Rate (₹/gram)</label>
+        <input type="number" class="form-input" id="baseRate" oninput="CalcPage.calcKarat()"/>
+        <div style="font-size:0.7rem;color:#aaa;font-family:var(--font-sans);margin-top:0.3rem" id="baseRateNote">Auto-filled from live market rate</div>
+      </div>
+      <div class="form-group"><label style="font-size:0.73rem;color:#888;display:block;text-transform:uppercase;font-weight:600;margin-bottom:0.35rem">Weight (grams)</label>
+        <input type="number" class="form-input" id="kWeight" value="10" oninput="CalcPage.calcKarat()"/>
+      </div>
+    </div>
+    <div class="calc-card">
+      <h3>📊 All Karat Prices</h3>
+      <div class="karat-grid" id="allKaratGrid" style="grid-template-columns:repeat(2,1fr)"></div>
+    </div>
+  </div>
+
+  <!-- TAB: OLD GOLD -->
+  <div id="tab-old" class="calc-layout" style="display:none">
+    <div class="calc-card">
+      <h3>🔄 Old Gold Value Calculator</h3>
+      <div class="form-group"><label style="font-size:0.73rem;color:#888;display:block;text-transform:uppercase;font-weight:600;margin-bottom:0.35rem">Your Gold's Karat</label>
+        <select class="form-input" id="ogKarat" onchange="CalcPage.calcOldGold()"><option value="24">24K (99.9% pure)</option><option value="22" selected>22K (91.6% pure)</option><option value="18">18K (75% pure)</option><option value="14">14K (58.3% pure)</option></select>
+      </div>
+      <div class="form-group"><label style="font-size:0.73rem;color:#888;display:block;text-transform:uppercase;font-weight:600;margin-bottom:0.35rem">Weight (grams)</label>
+        <input type="number" class="form-input" id="ogWeight" value="10" oninput="CalcPage.calcOldGold()"/>
+      </div>
+      <div style="background:rgba(201,150,42,0.06);border:1px solid rgba(201,150,42,0.2);border-radius:8px;padding:1rem;font-size:0.8rem;color:#888;font-family:var(--font-sans);line-height:1.6;margin-top:1rem">⚠️ Actual exchange value may vary based on purity verification at store. Bring your old gold to our Hiramandalam store for free assessment.</div>
+    </div>
+    <div class="calc-card">
+      <h3>📊 Exchange Value</h3>
+      <div class="calc-result-box"><div class="crb-label">Estimated Exchange Value</div><div class="crb-value" id="ogResult">₹66,920</div><div class="crb-break" id="ogBreak">Based on 22K at current market rate (before deductions)</div></div>
+      <div style="margin-top:1rem;padding:1rem;background:#fff8e1;border-radius:8px;font-family:var(--font-sans);font-size:0.82rem;color:#795548;line-height:1.6"><strong>🏆 Bonus Offer:</strong> Exchange above 10 grams and get up to ₹500 extra per gram at Sri Tirumala Jewellers!</div>
+      <button onclick="window.open('https://wa.me/919014457855?text=Hello!%20I%20want%20to%20exchange%20my%20old%20gold.%20Please%20guide%20me.','_blank')" class="btn-whatsapp" style="margin-top:1rem;width:100%;justify-content:center"><i class="fab fa-whatsapp"></i> Enquire About Exchange</button>
+    </div>
+  </div>
+</div>
+
+<footer id="siteFooter"><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0"><p>© 2025 Sri Tirumala Jewellers · Hiramandalam, Srikakulam</p><p><a href="../index.html" style="color:var(--gold)">← Back to Home</a></p></div></div></footer>
+<div class="wa-float"><div class="wa-label">Get custom quote</div><a href="https://wa.me/919014457855" target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i></a></div>
+<div class="drawer-overlay" id="cartOverlay" onclick="STJ.closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer"><div class="drawer-header"><h3>🛍 Cart</h3><button onclick="STJ.closeCart()"><i class="fas fa-times"></i></button></div><div class="drawer-items" id="cartItems"></div><div class="drawer-footer"><div class="cart-total-row total"><span>Total</span><strong id="cartTotal">₹0</strong></div><a href="checkout.html" class="btn-primary" style="width:100%;justify-content:center;margin-top:1rem">Checkout</a></div></aside>
+<div id="toast" class="toast"></div>
+
+<script src="../js/gold-api.js"></script>
+<script src="../js/store.js"></script>
+<script src="../js/main.js"></script>
+<script>
+const CalcPage = {
+  activeTab: 'jewellery',
+  switchTab(tab, idx) {
+    this.activeTab = tab;
+    ['jewellery','budget','karat','old'].forEach(t => {
+      const el = document.getElementById('tab-' + t);
+      if(el) el.style.display = t === tab ? (window.innerWidth > 768 ? 'grid' : 'block') : 'none';
+    });
+    document.querySelectorAll('.ctab').forEach((b,i) => b.classList.toggle('active', i === idx));
+    if(tab === 'karat') { const el = document.getElementById('baseRate'); if(el) el.value = Math.round(GoldAPI.getCurrentGold24k ? GoldAPI.getCurrentGold24k() : 7420); }
+    this['calc' + tab.charAt(0).toUpperCase() + tab.slice(1)]?.();
+  },
+  update(gold24k) {
+    const fmt = GoldAPI.fmt; const kp = GoldAPI.karatPrice;
+    document.getElementById('t24') && (document.getElementById('t24').textContent = fmt(kp(24)) + '/g');
+    document.getElementById('t22') && (document.getElementById('t22').textContent = fmt(kp(22)) + '/g');
+    document.getElementById('t18') && (document.getElementById('t18').textContent = fmt(kp(18)) + '/g');
+    document.getElementById('liveBanner24') && (document.getElementById('liveBanner24').textContent = fmt(kp(24)) + '/g');
+    document.getElementById('liveBanner22') && (document.getElementById('liveBanner22').textContent = fmt(kp(22)) + '/g');
+    document.getElementById('liveBanner18') && (document.getElementById('liveBanner18').textContent = fmt(kp(18)) + '/g');
+    const now = new Date();
+    document.getElementById('calcLastUpdated') && (document.getElementById('calcLastUpdated').textContent = 'Updated: ' + now.toLocaleTimeString('en-IN', {hour:'2-digit',minute:'2-digit',second:'2-digit'}) + ' IST');
+    if(document.getElementById('baseRate') && !document.getElementById('baseRate').value) document.getElementById('baseRate').value = Math.round(gold24k);
+    this['calc' + this.activeTab.charAt(0).toUpperCase() + this.activeTab.slice(1)]?.();
+  },
+  calcJewellery() {
+    const karat = parseInt(document.getElementById('jKarat').value);
+    const weight = parseFloat(document.getElementById('jWeight').value) || 0;
+    const making = parseFloat(document.getElementById('jMaking').value) || 0;
+    const slider = document.getElementById('jSlider');
+    if(slider) slider.value = weight;
+    if(!weight) return;
+    const d = GoldAPI.getTotalPrice(karat, weight, making);
+    document.getElementById('jTotal').textContent = GoldAPI.fmt(d.total);
+    document.getElementById('jBreak').textContent = `Gold: ${GoldAPI.fmt(d.goldValue)} + Making: ${GoldAPI.fmt(d.making)} + GST (3%): ${GoldAPI.fmt(d.gst)}`;
+    const grid = document.getElementById('karatGrid');
+    if(grid) grid.innerHTML = [24,22,20,18,14].map(k => `<div class="karat-item ${k===karat?'style="border-color:var(--gold)"':''}"><div class="ki-label">${k}K</div><div class="ki-val">${GoldAPI.fmt(GoldAPI.karatPrice(k)*weight)}</div></div>`).join('');
+  },
+  calcBudget() {
+    const budget = parseFloat(document.getElementById('bBudget').value) || 0;
+    const karat = parseInt(document.getElementById('bKarat').value);
+    const making = parseFloat(document.getElementById('bMaking').value) || 0;
+    const goldRate = GoldAPI.karatPrice(karat);
+    const totalPerGram = goldRate + making + (goldRate + making) * GoldAPI.GST_RATE;
+    const grams = budget / totalPerGram;
+    document.getElementById('bResult').textContent = grams.toFixed(2) + ' grams';
+    document.getElementById('bBreak').textContent = `of ${karat}K gold at ₹${Math.round(totalPerGram).toLocaleString('en-IN')}/g (all-in)`;
+  },
+  calcKarat() {
+    const base = parseFloat(document.getElementById('baseRate')?.value) || GoldAPI.getCurrentGold24k?.() || 7420;
+    const weight = parseFloat(document.getElementById('kWeight')?.value) || 10;
+    const grid = document.getElementById('allKaratGrid');
+    if(!grid) return;
+    grid.innerHTML = [24,22,20,18,16,14,10,8].map(k => `<div class="karat-item"><div class="ki-label">${k}K (${Math.round(k/24*100*10)/10}%)</div><div class="ki-val">${GoldAPI.fmt(base*(k/24)*weight)}</div></div>`).join('');
+  },
+  calcOldGold() {
+    const karat = parseInt(document.getElementById('ogKarat').value);
+    const weight = parseFloat(document.getElementById('ogWeight').value) || 0;
+    const value = GoldAPI.karatPrice(karat) * weight * 0.9; // 10% deduction typical
+    document.getElementById('ogResult').textContent = GoldAPI.fmt(value);
+    document.getElementById('ogBreak').textContent = `${weight}g × ${karat}K rate (₹${Math.round(GoldAPI.karatPrice(karat)).toLocaleString('en-IN')}/g) × 90% purity factor`;
+  },
+  whatsappEnquiry() {
+    const karat = document.getElementById('jKarat').value;
+    const weight = document.getElementById('jWeight').value;
+    const making = document.getElementById('jMaking').value;
+    const d = GoldAPI.getTotalPrice(parseInt(karat), parseFloat(weight), parseFloat(making));
+    const msg = `🛕 *SRI TIRUMALA JEWELLERS — PRICE ENQUIRY*\n\nI calculated this on your website:\n⚖️ Karat: ${karat}K\n📏 Weight: ${weight}g\n💰 Estimated Total: ${GoldAPI.fmt(d.total)}\n\nPlease confirm the actual price. Thank you!`;
+    window.open('https://wa.me/919014457855?text=' + encodeURIComponent(msg), '_blank');
+  }
+};
+
+STJ.init();
+GoldAPI.start();
+GoldAPI.onUpdate(({gold24k}) => CalcPage.update(gold24k));
+CalcPage.calcJewellery();
+</script>
+</body>
+</html>
