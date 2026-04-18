@@ -1219,8 +1219,8 @@ footer {
           </select>
           <label class="form-label-gold" style="margin-top:1rem">Weight (grams)</label>
           <input type="number" class="form-control-gold" id="jewWeight" value="5" oninput="calcJewellery()" placeholder="e.g. 5"/>
-          <label class="form-label-gold" style="margin-top:1rem">Making Charges (₹/gram)</label>
-          <input type="number" class="form-control-gold" id="makingCh" value="350" oninput="calcJewellery()" placeholder="e.g. 350"/>
+          <label class="form-label-gold" style="margin-top:1rem">Making Charges (%/weight)</label>
+          <input type="number" class="form-control-gold" id="makingCh" value="8" oninput="calcJewellery()" placeholder="e.g. 8"/>
           <div class="calc-result" style="margin-top:1rem">
             <div class="calc-result-label">Estimated Total Price</div>
             <div class="calc-result-value" id="jewTotal">₹35,760</div>
@@ -1730,7 +1730,7 @@ function calcJewellery(){
   const w=parseFloat(document.getElementById('jewWeight').value)||0;
   const m=parseFloat(document.getElementById('makingCh').value)||0;
   const gPrice=(k/24)*gold24k;
-  const goldVal=gPrice*w, makingVal=m*w;
+  const goldVal=gPrice*w, makingVal=m*w/100;
   document.getElementById('jewTotal').textContent=formatPrice(goldVal+makingVal);
   document.getElementById('jewBreak').textContent='Gold: '+formatPrice(goldVal)+' + Making: '+formatPrice(makingVal);
 }
