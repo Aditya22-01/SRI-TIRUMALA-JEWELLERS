@@ -1726,13 +1726,22 @@ function calcKarat(){
   });
 }
 function calcJewellery(){
-  const k=parseInt(document.getElementById('jewKarat').value);
-  const w=parseFloat(document.getElementById('jewWeight').value)||0;
-  const m=parseFloat(document.getElementById('makingCh').value)||0;
-  const gPrice=(k/24)*gold24k;
-  const goldVal=parseFloat(gPrice*w, makingVal=m*w/100);
-  document.getElementById('jewTotal').textContent=formatPrice(goldVal+makingVal);
-  document.getElementById('jewBreak').textContent='Gold: '+formatPrice(goldVal)+' + Making: '+formatPrice(makingVal);
+  const k = parseInt(document.getElementById('jewKarat').value);
+  const w = parseFloat(document.getElementById('jewWeight').value) || 0;
+  const m = parseFloat(document.getElementById('makingCh').value) || 0;
+
+  const gPrice = (k / 24) * gold24k;
+
+  const goldVal = gPrice * w;
+
+  // making % applied on gold value
+  const makingVal = (m / 100) * goldVal;
+
+  const total = goldVal + makingVal;
+
+  document.getElementById('jewTotal').textContent = formatPrice(total);
+  document.getElementById('jewBreak').textContent =
+    'Gold: ' + formatPrice(goldVal) + ' + Making: ' + formatPrice(makingVal);
 }
 function calcBuying(){
   const budget=parseFloat(document.getElementById('budget').value)||0;
