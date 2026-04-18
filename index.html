@@ -1200,12 +1200,13 @@ footer {
           <label class="form-label-gold" style="margin-top:1rem">Weight (grams)</label>
           <input type="number" class="form-control-gold" id="gramWeight" value="10" oninput="calcKarat()" placeholder="Enter weight"/>
           <div class="karat-results" style="margin-top:1.2rem">
+            <div class="karat-result-item"><div class="k-label">24K</div><div class="k-val" id="res24k">₹1,55,557</div></div>
             <div class="karat-result-item"><div class="k-label">22K</div><div class="k-val" id="res22k">₹1,42,730</div></div>
             <div class="karat-result-item"><div class="k-label">20K</div><div class="k-val" id="res20k">₹1,29,640</div></div>
             <div class="karat-result-item"><div class="k-label">18K</div><div class="k-val" id="res18k">₹1,16,700</div></div>
             <div class="karat-result-item"><div class="k-label">16K</div><div class="k-val" id="res16k">₹99,550</div></div>
             <div class="karat-result-item"><div class="k-label">14K</div><div class="k-val" id="res14k">₹91,120</div></div>
-            <div class="karat-result-item"><div class="k-label">10K</div><div class="k-val" id="res10k">₹72,310</div></div>
+            <!-- <div class="karat-result-item"><div class="k-label">10K</div><div class="k-val" id="res10k">₹72,310</div></div> -->
           </div>
         </div>
         <div class="calc-card fade-up">
@@ -1721,7 +1722,7 @@ updateAllRates();
 function calcKarat(){
   const base = parseFloat(document.getElementById('base24k').value)||7420;
   const g = parseFloat(document.getElementById('gramWeight').value)||1;
-  [['22','res22k'],['20','res20k'],['18','res18k'],['16','res16k'],['14','res14k'],['10','res10k']].forEach(([k,id])=>{
+  [,['24','res24k'],['22','res22k'],['20','res20k'],['18','res18k'],['16','res16k'],['14','res14k']].forEach(([k,id])=>{
     document.getElementById(id).textContent = formatPrice((parseInt(k)/24)*base*g);
   });
 }
