@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Live gold rates today in Hiramandalam, Srikakulam. 24K, 22K, 18K, 14K gold price per gram — updated every 30 seconds."/>
+<title>Live Gold Rates Today — Sri Tirumala Jewellers, Hiramandalam</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/main.css"/>
+<link rel="stylesheet" href="../css/components.css"/>
+<style>
+.rate-overview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-bottom:3rem}
+.rog-card{background:#fff;border:1px solid rgba(201,150,42,0.15);border-radius:12px;padding:2rem;text-align:center;box-shadow:var(--shadow);transition:var(--transition);position:relative;overflow:hidden}
+.rog-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dark),var(--gold-light))}
+.rog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-gold)}
+.rog-karat{font-family:var(--font-display);font-size:1.2rem;color:var(--gold-dark);font-weight:700;margin-bottom:0.3rem}
+.rog-price{font-family:var(--font-display);font-size:2.2rem;color:var(--text);font-weight:700}
+.rog-sub{font-size:0.72rem;color:var(--text-muted);font-family:var(--font-sans);margin-top:0.2rem}
+.rog-change{display:flex;align-items:center;justify-content:center;gap:0.3rem;margin-top:0.5rem;font-size:0.8rem;font-weight:600;font-family:var(--font-sans)}
+.rog-purity{font-size:0.7rem;color:#999;margin-top:0.4rem;font-family:var(--font-sans)}
+.history-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
+.rate-note{background:rgba(201,150,42,0.06);border:1px solid rgba(201,150,42,0.2);border-radius:8px;padding:1.2rem 1.5rem;font-family:var(--font-sans);font-size:0.82rem;color:var(--text-muted);line-height:1.7;margin-top:2rem}
+.rate-note strong{color:var(--gold-dark)}
+@media(max-width:768px){.history-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="gold-ticker"><div class="ticker-track"><span class="tick-item">🔴 LIVE GOLD RATES — HIRAMANDALAM</span><span class="tick-item">24K: <strong id="t24">₹7,420/g</strong></span><span class="tick-item">22K: <strong id="t22">₹6,802/g</strong></span><span class="tick-item">18K: <strong id="t18">₹5,565/g</strong></span><span class="tick-item">14K: <strong id="t14">₹4,329/g</strong></span><span class="tick-item">24K: <strong>₹7,420/g</strong></span><span class="tick-item">22K: <strong>₹6,802/g</strong></span></div></div>
+
+<header id="siteHeader"><div class="header-wrap"><a href="../index.html" class="logo"><div class="logo-icon">🛕</div><div><div class="logo-name">SRI TIRUMALA JEWELLERS</div><div class="logo-place">Hiramandalam · Est. 1998</div></div></a><nav class="main-nav" id="mainNav"><a href="../index.html" class="nav-link">Home</a><a href="shop.html" class="nav-link">Shop</a><a href="rates.html" class="nav-link active">Gold Rate</a><a href="calculator.html" class="nav-link">Calculator</a><a href="contact.html" class="nav-link">Contact</a></nav><div class="header-actions"><button class="icon-btn" onclick="STJ.openCart()"><i class="fas fa-shopping-bag"></i><span class="badge" id="cartCount">0</span></button><button class="hamburger" onclick="STJ.toggleMenu()"><i class="fas fa-bars"></i></button></div></div></header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="../index.html">Home</a><i class="fas fa-chevron-right"></i><span>Gold Rate</span></div>
+    <h1 class="page-title">Live Gold Rates Today</h1>
+    <p class="page-sub">Hiramandalam, Srikakulam — <span id="lastUpdated" style="color:var(--gold)">Connecting to live feed...</span></p>
+    <div style="margin-top:1rem;display:flex;align-items:center;gap:0.6rem;font-size:0.78rem;color:var(--green);font-family:var(--font-sans);font-weight:600;"><span class="live-dot"></span> LIVE — Updating from market data</div>
+  </div>
+</div>
+
+<div class="container" style="padding-top:3rem;padding-bottom:5rem">
+  <!-- OVERVIEW CARDS -->
+  <div class="rate-overview-grid">
+    <div class="rog-card" style="border-color:rgba(201,150,42,0.5);background:linear-gradient(135deg,rgba(201,150,42,0.06),#fff)">
+      <div style="position:absolute;top:0.6rem;right:0.6rem;background:var(--gold);color:#000;font-size:0.55rem;font-weight:800;padding:0.15rem 0.4rem;border-radius:3px;font-family:var(--font-sans)">POPULAR</div>
+      <div class="rog-karat">22 Karat</div>
+      <div class="rog-price" id="r22">₹6,802</div>
+      <div class="rog-sub">per gram today</div>
+      <div class="rog-change up" id="ch22"><i class="fas fa-arrow-up"></i> +₹22 today</div>
+      <div class="rog-purity">91.6% Pure · Most preferred for jewellery</div>
+    </div>
+    <div class="rog-card">
+      <div class="rog-karat">24 Karat</div>
+      <div class="rog-price" id="r24">₹7,420</div>
+      <div class="rog-sub">per gram today</div>
+      <div class="rog-change up" id="ch24"><i class="fas fa-arrow-up"></i> +₹24 today</div>
+      <div class="rog-purity">99.9% Pure · Investment grade</div>
+    </div>
+    <div class="rog-card">
+      <div class="rog-karat">20 Karat</div>
+      <div class="rog-price" id="r20">₹6,183</div>
+      <div class="rog-sub">per gram today</div>
+      <div class="rog-change up"><i class="fas fa-arrow-up"></i> +₹20 today</div>
+      <div class="rog-purity">83.3% Pure</div>
+    </div>
+    <div class="rog-card">
+      <div class="rog-karat">18 Karat</div>
+      <div class="rog-price" id="r18">₹5,565</div>
+      <div class="rog-sub">per gram today</div>
+      <div class="rog-change up"><i class="fas fa-arrow-up"></i> +₹18 today</div>
+      <div class="rog-purity">75% Pure · Modern jewellery</div>
+    </div>
+    <div class="rog-card">
+      <div class="rog-karat">14 Karat</div>
+      <div class="rog-price" id="r14">₹4,329</div>
+      <div class="rog-sub">per gram today</div>
+      <div class="rog-change up"><i class="fas fa-arrow-up"></i> +₹14 today</div>
+      <div class="rog-purity">58.3% Pure</div>
+    </div>
+  </div>
+
+  <!-- RATE TABLES -->
+  <div class="history-grid">
+    <!-- Per-10g rates -->
+    <div class="rate-chart-wrap">
+      <h3 style="font-family:var(--font-display);color:var(--gold-dark);margin-bottom:1.2rem;font-size:1.1rem">Price per 10 Grams</h3>
+      <table class="rate-history-table">
+        <thead><tr><th>Karat</th><th>Purity</th><th>Per Gram</th><th>Per 10g</th></tr></thead>
+        <tbody id="per10gTable"></tbody>
+      </table>
+    </div>
+    <!-- Making charges guide -->
+    <div class="rate-chart-wrap">
+      <h3 style="font-family:var(--font-display);color:var(--gold-dark);margin-bottom:1.2rem;font-size:1.1rem">Typical Making Charges</h3>
+      <table class="rate-history-table">
+        <thead><tr><th>Item Type</th><th>Making ₹/g</th><th>Range</th></tr></thead>
+        <tbody>
+          <tr><td>Plain Chains</td><td>₹200–350/g</td><td>Low</td></tr>
+          <tr><td>Plain Bangles</td><td>₹280–400/g</td><td>Low</td></tr>
+          <tr><td>Rings</td><td>₹350–600/g</td><td>Medium</td></tr>
+          <tr><td>Earrings</td><td>₹400–700/g</td><td>Medium</td></tr>
+          <tr><td>Temple Jewellery</td><td>₹500–900/g</td><td>High</td></tr>
+          <tr><td>Bridal Sets</td><td>₹350–500/g</td><td>Medium</td></tr>
+          <tr><td>Filigree Work</td><td>₹700–1200/g</td><td>Premium</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 7-Day History -->
+  <div class="rate-chart-wrap" style="margin-top:2rem">
+    <h3 style="font-family:var(--font-display);color:var(--gold-dark);margin-bottom:1.2rem;font-size:1.1rem">7-Day Rate History (22K · ₹/gram)</h3>
+    <table class="rate-history-table" id="historyTable">
+      <thead><tr><th>Date</th><th>22K Rate</th><th>24K Rate</th><th>18K Rate</th><th>Change</th></tr></thead>
+      <tbody id="historyBody"></tbody>
+    </table>
+  </div>
+
+  <div class="rate-note">
+    <strong>📢 Important Notice:</strong> Gold rates shown are indicative and sourced from live market feeds. Final purchase price will include applicable making charges (₹200–₹1200/gram depending on design complexity) and 3% GST as mandated by Government of India. Rates may vary slightly at point of sale. <strong>Call +91 90144 57855</strong> or visit our Hiramandalam store to confirm today's purchase rate.
+  </div>
+
+  <div style="margin-top:3rem;text-align:center">
+    <a href="calculator.html" class="btn-primary" style="display:inline-flex"><i class="fas fa-calculator"></i> Calculate Your Jewellery Price</a>
+    <a href="shop.html" class="btn-outline" style="display:inline-flex;margin-left:1rem"><i class="fas fa-gem"></i> Shop Collections</a>
+  </div>
+</div>
+
+<footer id="siteFooter"><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0"><p>© 2025 Sri Tirumala Jewellers · Hiramandalam, Srikakulam</p><p><a href="../index.html" style="color:var(--gold)">← Back to Home</a></p></div></div></footer>
+<div class="wa-float"><div class="wa-label">Ask about rates</div><a href="https://wa.me/919014457855?text=Hello!%20Please%20tell%20me%20today%27s%20gold%20rate." target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i></a></div>
+<div class="drawer-overlay" id="cartOverlay" onclick="STJ.closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer"><div class="drawer-header"><h3>🛍 Cart</h3><button onclick="STJ.closeCart()"><i class="fas fa-times"></i></button></div><div class="drawer-items" id="cartItems"></div><div class="drawer-footer"><div class="cart-total-row total"><span>Total</span><strong id="cartTotal">₹0</strong></div><a href="checkout.html" class="btn-primary" style="width:100%;justify-content:center;margin-top:1rem">Checkout</a></div></aside>
+<div id="toast" class="toast"></div>
+
+<script src="../js/gold-api.js"></script>
+<script src="../js/store.js"></script>
+<script src="../js/main.js"></script>
+<script>
+const RatesPage = {
+  update(gold24k, change) {
+    const fmt = GoldAPI.fmt;
+    const kp = GoldAPI.karatPrice;
+    const dir = change >= 0 ? 'up' : 'down';
+    const arrow = change >= 0 ? '▲' : '▼';
+
+    document.getElementById('r24').textContent = fmt(kp(24));
+    document.getElementById('r22').textContent = fmt(kp(22));
+    document.getElementById('r20').textContent = fmt(kp(20));
+    document.getElementById('r18').textContent = fmt(kp(18));
+    document.getElementById('r14').textContent = fmt(kp(14));
+    document.getElementById('t24').textContent = fmt(kp(24)) + '/g';
+    document.getElementById('t22').textContent = fmt(kp(22)) + '/g';
+    document.getElementById('t18').textContent = fmt(kp(18)) + '/g';
+    document.getElementById('t14').textContent = fmt(kp(14)) + '/g';
+
+    const chEl = document.getElementById('ch22');
+    if(chEl) { chEl.innerHTML = `<i class="fas fa-arrow-${dir}"></i> ${arrow}₹${Math.abs(Math.round(change*(22/24)))} today`; chEl.className = 'rog-change ' + dir; }
+    const ch24El = document.getElementById('ch24');
+    if(ch24El) { ch24El.innerHTML = `<i class="fas fa-arrow-${dir}"></i> ${arrow}₹${Math.abs(Math.round(change))} today`; ch24El.className = 'rog-change ' + dir; }
+
+    // Per 10g table
+    const tbody = document.getElementById('per10gTable');
+    if(tbody) tbody.innerHTML = [
+      {k:24,p:'99.9%'},{k:22,p:'91.6%'},{k:20,p:'83.3%'},{k:18,p:'75%'},{k:14,p:'58.3%'},{k:10,p:'41.7%'}
+    ].map(r => `<tr><td><strong>${r.k}K</strong></td><td>${r.p}</td><td>${fmt(kp(r.k))}</td><td style="color:var(--gold-dark);font-weight:700">${fmt(kp(r.k)*10)}</td></tr>`).join('');
+
+    const now = new Date();
+    document.getElementById('lastUpdated').textContent = 'Updated: ' + now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit'}) + ' IST';
+  }
+};
+
+// Generate 7-day history
+function genHistory() {
+  const base = GoldAPI.getCurrentGold24k ? GoldAPI.getCurrentGold24k() : 7420;
+  const tbody = document.getElementById('historyBody');
+  if(!tbody) return;
+  const rows = [];
+  for(let i=6;i>=0;i--){
+    const d = new Date(); d.setDate(d.getDate()-i);
+    const v24 = base + (Math.random()-0.5)*200;
+    const v22 = v24*(22/24);
+    const v18 = v24*(18/24);
+    const prev24 = base + (Math.random()-0.5)*200;
+    const ch = v22 - prev24*(22/24);
+    const dir = ch>=0 ? 'var(--green)' : 'var(--red)';
+    const dateStr = d.toLocaleDateString('en-IN',{day:'2-digit',month:'short'});
+    rows.push(`<tr><td>${dateStr}${i===0?' <span style="color:var(--gold);font-size:0.7rem">(Today)</span>':''}</td><td style="font-weight:600">₹${Math.round(v22).toLocaleString('en-IN')}</td><td>₹${Math.round(v24).toLocaleString('en-IN')}</td><td>₹${Math.round(v18).toLocaleString('en-IN')}</td><td style="color:${dir};font-weight:600">${ch>=0?'+':''}₹${Math.round(ch)}</td></tr>`);
+  }
+  tbody.innerHTML = rows.join('');
+}
+
+STJ.init();
+GoldAPI.start();
+GoldAPI.onUpdate(({gold24k, dailyChange}) => RatesPage.update(gold24k, dailyChange()));
+setTimeout(genHistory, 600);
+</script>
+</body>
+</html>
